@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <title>IMPERIO PACK JD</title>
 
-<meta name="description" content="Imperio Pack JD - Todo para tu negocio.">
+<meta
+  name="description"
+  content="Imperio Pack JD - Todo para tu negocio."
+>
 
 <style>
 
+/* =====================================================
+   VARIABLES
+===================================================== */
+
 :root{
+
   --fondo:#0E041D;
   --violeta-profundo:#1A0C2F;
   --violeta:#3A145C;
@@ -18,173 +32,298 @@
   --magenta:#B92C82;
   --naranja:#FF9F3D;
   --naranja-fuerte:#FF7043;
+
   --blanco:#FFFFFF;
   --blanco-secundario:#D9D4E2;
   --gris:#9C94A8;
+
 }
 
+
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
+
   box-sizing:border-box;
   margin:0;
   padding:0;
+
 }
+
 
 html{
+
   scroll-behavior:smooth;
+
 }
 
+
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--fondo);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background:
+    var(--fondo);
+
   color:white;
+
   min-height:100vh;
+
 }
+
 
 button,
 input,
 textarea{
+
   font-family:inherit;
+
 }
 
+
 button{
+
   cursor:pointer;
+
 }
+
 
 /* =====================================================
    HEADER
 ===================================================== */
 
 header{
+
   position:sticky;
+
   top:0;
+
   z-index:1000;
-  background:rgba(14,4,29,.97);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid rgba(255,255,255,.08);
-  box-shadow:0 8px 30px rgba(0,0,0,.25);
+
+  background:
+    rgba(14,4,29,.97);
+
+  backdrop-filter:
+    blur(15px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.25);
+
 }
+
 
 .header-inner{
+
   max-width:1250px;
+
   min-height:82px;
+
   margin:auto;
+
   padding:10px 25px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:20px;
+
 }
+
 
 .header-logo{
+
   display:flex;
+
   align-items:center;
+
   min-width:220px;
+
 }
+
 
 .header-logo img{
+
   width:205px;
+
   max-height:62px;
+
   object-fit:contain;
+
   display:block;
+
 }
 
-/* =====================================================
-   TITULO
-===================================================== */
 
 .header-title{
+
   flex:1;
+
   text-align:center;
-  font-size:clamp(20px,3vw,30px);
+
+  font-size:
+    clamp(20px,3vw,30px);
+
   font-weight:950;
+
   letter-spacing:1px;
-  background:linear-gradient(
-    90deg,
-    #FFFFFF,
-    var(--magenta),
-    var(--naranja)
-  );
+
+  background:
+    linear-gradient(
+      90deg,
+      #FFFFFF,
+      var(--magenta),
+      var(--naranja)
+    );
+
   -webkit-background-clip:text;
+
   background-clip:text;
+
   color:transparent;
+
   white-space:nowrap;
+
 }
 
-/* =====================================================
-   CARRITO HEADER
-===================================================== */
 
 .header-cart{
+
   min-width:150px;
+
   display:flex;
+
   justify-content:flex-end;
+
 }
+
 
 .cart-button{
-  border:1px solid rgba(255,159,61,.45);
-  background:linear-gradient(
-    135deg,
-    var(--violeta),
-    var(--purpura)
-  );
+
+  border:
+    1px solid rgba(255,159,61,.45);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--violeta),
+      var(--purpura)
+    );
+
   color:white;
+
   font-weight:900;
+
   padding:11px 16px;
+
   border-radius:12px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   gap:9px;
+
   transition:.25s;
+
   white-space:nowrap;
-  box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,.2);
+
 }
+
 
 .cart-button:hover{
-  transform:translateY(-2px);
-  border-color:var(--naranja);
-  box-shadow:0 8px 25px rgba(255,112,67,.25);
+
+  transform:
+    translateY(-2px);
+
+  border-color:
+    var(--naranja);
+
+  box-shadow:
+    0 8px 25px
+    rgba(255,112,67,.25);
+
 }
+
 
 .cart-icon{
+
   font-size:20px;
+
 }
 
+
 #cartCount{
-  background:var(--naranja);
+
+  background:
+    var(--naranja);
+
   color:#190923;
+
   border-radius:50%;
+
   min-width:25px;
+
   height:25px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   font-size:12px;
+
   font-weight:900;
+
 }
+
 
 /* =====================================================
    HERO
 ===================================================== */
 
 .hero{
+
   position:relative;
+
   overflow:hidden;
+
   min-height:460px;
+
   display:flex;
+
   align-items:center;
 
   background:
+
     radial-gradient(
       circle at 75% 40%,
       rgba(185,44,130,.28),
       transparent 35%
     ),
+
     radial-gradient(
       circle at 15% 90%,
       rgba(255,112,67,.22),
       transparent 35%
     ),
+
     linear-gradient(
       135deg,
       #0E041D 0%,
@@ -192,711 +331,1310 @@ header{
       #421052 75%,
       #1A0C2F 100%
     );
+
 }
+
 
 .hero::before{
+
   content:"";
+
   position:absolute;
+
   width:500px;
+
   height:500px;
+
   border-radius:50%;
-  background:radial-gradient(
-    circle,
-    rgba(255,159,61,.18),
-    transparent 65%
-  );
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,159,61,.18),
+      transparent 65%
+    );
+
   top:-250px;
+
   right:-150px;
+
 }
+
 
 .hero::after{
+
   content:"";
+
   position:absolute;
+
   width:450px;
+
   height:450px;
+
   border-radius:50%;
-  background:radial-gradient(
-    circle,
-    rgba(185,44,130,.20),
-    transparent 65%
-  );
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(185,44,130,.20),
+      transparent 65%
+    );
+
   bottom:-250px;
+
   left:-120px;
+
 }
+
 
 .hero-inner{
+
   position:relative;
+
   z-index:2;
+
   width:100%;
+
   max-width:1250px;
+
   margin:auto;
+
   padding:55px 25px;
+
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   align-items:center;
+
   gap:40px;
+
 }
+
 
 .hero-content{
+
   text-align:left;
+
 }
+
 
 .hero-logo-container{
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
 }
+
 
 .hero-logo{
+
   width:min(520px,90%);
+
   max-height:300px;
+
   object-fit:contain;
+
   display:block;
-  filter:drop-shadow(
-    0 20px 40px rgba(0,0,0,.45)
-  );
-  animation:logoEntrada .8s ease-out;
+
+  filter:
+    drop-shadow(
+      0 20px 40px rgba(0,0,0,.45)
+    );
+
+  animation:
+    logoEntrada .8s ease-out;
+
 }
+
 
 @keyframes logoEntrada{
+
   from{
+
     opacity:0;
-    transform:translateY(20px) scale(.96);
+
+    transform:
+      translateY(20px)
+      scale(.96);
+
   }
+
   to{
+
     opacity:1;
-    transform:translateY(0) scale(1);
+
+    transform:
+      translateY(0)
+      scale(1);
+
   }
+
 }
+
 
 .hero h1{
-  font-size:clamp(30px,5vw,55px);
+
+  font-size:
+    clamp(30px,5vw,55px);
+
   line-height:1.05;
+
   font-weight:950;
+
   margin-bottom:18px;
+
 }
+
 
 .hero h1 span{
+
   display:block;
-  background:linear-gradient(
-    90deg,
-    var(--magenta),
-    var(--naranja)
-  );
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--magenta),
+      var(--naranja)
+    );
+
   -webkit-background-clip:text;
+
   background-clip:text;
+
   color:transparent;
+
 }
 
+
 .hero p{
-  color:var(--blanco-secundario);
+
+  color:
+    var(--blanco-secundario);
+
   max-width:620px;
+
   font-size:17px;
+
   line-height:1.65;
+
 }
+
 
 /* =====================================================
    CONTENIDO
 ===================================================== */
 
 .container{
+
   max-width:1250px;
+
   margin:auto;
-  padding:45px 25px 70px;
+
+  padding:
+    45px 25px 70px;
+
 }
+
 
 .section-title{
+
   text-align:center;
+
   margin-bottom:28px;
+
 }
+
 
 .section-title h2{
+
   font-size:32px;
+
   margin-bottom:8px;
+
 }
+
 
 .section-title p{
+
   color:var(--gris);
+
   font-size:14px;
+
 }
 
+
 /* =====================================================
-   BUSCADOR
+   HERRAMIENTAS
 ===================================================== */
 
 .tools{
+
   display:flex;
+
   flex-direction:column;
+
   gap:18px;
+
   margin-bottom:35px;
+
 }
+
 
 .search{
+
   width:100%;
-  border:1px solid rgba(255,255,255,.10);
-  background:var(--violeta-profundo);
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  background:
+    var(--violeta-profundo);
+
   color:white;
+
   padding:16px 19px;
+
   border-radius:13px;
+
   font-size:16px;
+
   outline:none;
+
 }
+
 
 .search::placeholder{
+
   color:#8E829D;
+
 }
 
+
 .search:focus{
-  border-color:var(--naranja);
-  box-shadow:0 0 0 3px rgba(255,159,61,.08);
+
+  border-color:
+    var(--naranja);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(255,159,61,.08);
+
 }
+
 
 /* =====================================================
    CATEGORIAS
 ===================================================== */
 
 .categories{
+
   display:flex;
+
   gap:10px;
+
   overflow-x:auto;
+
   padding-bottom:5px;
+
   scrollbar-width:thin;
+
 }
+
 
 .category{
-  border:1px solid rgba(255,255,255,.10);
-  background:var(--violeta-profundo);
-  color:var(--blanco-secundario);
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  background:
+    var(--violeta-profundo);
+
+  color:
+    var(--blanco-secundario);
+
   border-radius:30px;
+
   padding:10px 18px;
+
   white-space:nowrap;
+
   font-weight:700;
+
   transition:.2s;
+
 }
+
 
 .category:hover{
-  border-color:var(--magenta);
+
+  border-color:
+    var(--magenta);
+
   color:white;
+
 }
 
+
 .category.active{
-  background:linear-gradient(
-    135deg,
-    var(--magenta),
-    var(--naranja)
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--magenta),
+      var(--naranja)
+    );
+
   color:#190923;
+
   border-color:transparent;
+
   font-weight:900;
+
 }
+
 
 /* =====================================================
    PRODUCTOS
 ===================================================== */
 
 .products-grid{
+
   display:grid;
+
   grid-template-columns:
-    repeat(auto-fill,minmax(220px,1fr));
+    repeat(
+      auto-fill,
+      minmax(220px,1fr)
+    );
+
   gap:22px;
+
 }
+
 
 .product-card{
-  background:linear-gradient(
-    145deg,
-    rgba(58,20,92,.95),
-    rgba(26,12,47,.98)
-  );
-  border:1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(58,20,92,.95),
+      rgba(26,12,47,.98)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
   border-radius:18px;
+
   overflow:hidden;
-  box-shadow:0 8px 30px rgba(0,0,0,.22);
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.22);
+
   display:flex;
+
   flex-direction:column;
+
   transition:.25s;
+
 }
+
 
 .product-card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(255,159,61,.35);
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(255,159,61,.35);
+
 }
+
 
 .product-image{
+
   width:100%;
+
   height:210px;
-  background:linear-gradient(
-    135deg,
-    #211032,
-    #36134F
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      #211032,
+      #36134F
+    );
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   overflow:hidden;
+
 }
+
 
 .product-image img{
+
   width:100%;
+
   height:100%;
+
   object-fit:cover;
+
 }
+
 
 .placeholder{
+
   font-size:55px;
+
   opacity:.35;
+
 }
+
 
 .product-info{
+
   padding:19px;
+
   display:flex;
+
   flex-direction:column;
+
   flex:1;
+
 }
+
 
 .product-category{
+
   font-size:11px;
+
   text-transform:uppercase;
+
   font-weight:800;
+
   letter-spacing:1px;
-  color:var(--naranja);
+
+  color:
+    var(--naranja);
+
   margin-bottom:8px;
+
 }
+
 
 .product-name{
+
   font-size:17px;
+
   font-weight:800;
+
   line-height:1.3;
+
   margin-bottom:8px;
+
 }
+
 
 .product-description{
-  color:var(--blanco-secundario);
+
+  color:
+    var(--blanco-secundario);
+
   opacity:.72;
+
   font-size:13px;
+
   line-height:1.45;
+
   margin-bottom:18px;
+
 }
+
 
 .product-bottom{
+
   margin-top:auto;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:10px;
+
 }
+
 
 .price{
+
   font-size:21px;
+
   font-weight:900;
-  background:linear-gradient(
-    90deg,
-    var(--naranja),
-    #FFC16D
-  );
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--naranja),
+      #FFC16D
+    );
+
   -webkit-background-clip:text;
+
   background-clip:text;
+
   color:transparent;
+
 }
+
 
 .add-button{
+
   border:0;
-  background:linear-gradient(
-    135deg,
-    var(--magenta),
-    var(--naranja-fuerte)
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--magenta),
+      var(--naranja-fuerte)
+    );
+
   color:white;
+
   border-radius:10px;
+
   padding:11px 14px;
+
   font-weight:900;
+
 }
+
 
 .out-stock{
+
   color:#FF7B7B;
+
   font-size:12px;
+
   font-weight:800;
+
 }
 
+
 .loading{
+
   grid-column:1/-1;
+
   text-align:center;
+
   padding:70px 20px;
+
   color:var(--gris);
+
 }
+
 
 /* =====================================================
    FILOSOFIA
 ===================================================== */
 
 .philosophy{
+
   margin-top:55px;
+
   padding:35px;
+
   border-radius:20px;
-  background:linear-gradient(
-    135deg,
-    rgba(58,20,92,.85),
-    rgba(26,12,47,.95)
-  );
-  border:1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(58,20,92,.85),
+      rgba(26,12,47,.95)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
 }
+
 
 .philosophy-title{
+
   text-align:center;
+
   margin-bottom:28px;
+
   font-size:28px;
+
   font-weight:900;
-  background:linear-gradient(
-    90deg,
-    var(--magenta),
-    var(--naranja)
-  );
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--magenta),
+      var(--naranja)
+    );
+
   -webkit-background-clip:text;
+
   background-clip:text;
+
   color:transparent;
+
 }
+
 
 .philosophy-grid{
+
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
   gap:25px;
+
 }
+
 
 .philosophy-item{
+
   padding:5px 10px;
+
 }
+
 
 .philosophy-item h3{
-  color:var(--naranja);
+
+  color:
+    var(--naranja);
+
   font-size:18px;
+
   margin-bottom:10px;
+
 }
+
 
 .philosophy-item p{
-  color:var(--blanco-secundario);
+
+  color:
+    var(--blanco-secundario);
+
   font-size:14px;
+
   line-height:1.65;
+
 }
 
+
 /* =====================================================
-   CARRITO LATERAL
+   CARRITO
 ===================================================== */
 
 .cart-overlay{
+
   position:fixed;
+
   inset:0;
-  background:rgba(0,0,0,.65);
+
+  background:
+    rgba(0,0,0,.65);
+
   z-index:2000;
+
   opacity:0;
+
   pointer-events:none;
+
   transition:.25s;
+
 }
+
 
 .cart-overlay.open{
+
   opacity:1;
+
   pointer-events:auto;
+
 }
+
 
 .cart{
+
   position:absolute;
+
   top:0;
+
   right:0;
+
   width:min(440px,100%);
+
   height:100%;
-  background:linear-gradient(
-    180deg,
-    #1A0C2F,
-    #0E041D
-  );
+
+  background:
+    linear-gradient(
+      180deg,
+      #1A0C2F,
+      #0E041D
+    );
+
   display:flex;
+
   flex-direction:column;
-  transform:translateX(100%);
+
+  transform:
+    translateX(100%);
+
   transition:.25s;
-  border-left:1px solid rgba(255,255,255,.08);
+
+  border-left:
+    1px solid rgba(255,255,255,.08);
+
 }
+
 
 .cart-overlay.open .cart{
-  transform:translateX(0);
+
+  transform:
+    translateX(0);
+
 }
+
 
 .cart-header{
+
   padding:20px;
-  border-bottom:1px solid rgba(255,255,255,.08);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
 }
+
 
 .cart-header h2{
+
   font-size:21px;
+
 }
+
 
 .close-cart{
+
   background:none;
+
   color:white;
+
   border:0;
+
   font-size:30px;
+
 }
+
 
 .cart-items{
+
   flex:1;
+
   overflow-y:auto;
+
   padding:15px 20px;
+
 }
+
 
 .cart-item{
+
   display:grid;
-  grid-template-columns:1fr auto;
+
+  grid-template-columns:
+    1fr auto;
+
   gap:10px;
+
   padding:16px 0;
-  border-bottom:1px solid rgba(255,255,255,.08);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
 }
+
 
 .cart-item-name{
+
   font-weight:800;
+
 }
+
 
 .cart-item-price{
-  color:var(--naranja);
+
+  color:
+    var(--naranja);
+
   font-weight:800;
+
   margin-top:6px;
+
 }
+
 
 .quantity{
+
   display:flex;
+
   align-items:center;
+
   gap:8px;
+
 }
+
 
 .quantity button{
+
   width:29px;
+
   height:29px;
-  border:1px solid rgba(255,255,255,.12);
-  background:var(--violeta);
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  background:
+    var(--violeta);
+
   color:white;
+
   border-radius:6px;
+
   font-weight:900;
+
 }
+
 
 .remove{
+
   border:0;
+
   background:none;
+
   color:#FF7B7B;
+
   font-size:12px;
+
   margin-top:8px;
+
 }
+
 
 .cart-footer{
-  border-top:1px solid rgba(255,255,255,.08);
+
+  border-top:
+    1px solid rgba(255,255,255,.08);
+
   padding:20px;
+
 }
+
 
 .cart-total{
+
   display:flex;
+
   justify-content:space-between;
+
   font-size:22px;
+
   font-weight:900;
+
   margin-bottom:18px;
+
 }
+
 
 #cartTotal{
-  color:var(--naranja);
+
+  color:
+    var(--naranja);
+
 }
+
 
 .checkout-button{
+
   width:100%;
+
   padding:15px;
+
   border:0;
-  background:linear-gradient(
-    135deg,
-    var(--magenta),
-    var(--naranja-fuerte)
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--magenta),
+      var(--naranja-fuerte)
+    );
+
   color:white;
+
   border-radius:11px;
+
   font-size:16px;
+
   font-weight:900;
+
 }
 
+
 .empty{
+
   text-align:center;
+
   color:var(--gris);
+
   padding:50px 20px;
+
 }
+
 
 /* =====================================================
    MODAL
 ===================================================== */
 
 .modal{
+
   position:fixed;
+
   inset:0;
-  background:rgba(0,0,0,.72);
+
+  background:
+    rgba(0,0,0,.72);
+
   z-index:3000;
+
   display:none;
+
   align-items:center;
+
   justify-content:center;
+
   padding:20px;
+
 }
+
 
 .modal.open{
+
   display:flex;
+
 }
+
 
 .modal-box{
-  background:linear-gradient(
-    145deg,
-    #26103F,
-    #120721
-  );
-  border:1px solid rgba(255,255,255,.10);
+
+  background:
+    linear-gradient(
+      145deg,
+      #26103F,
+      #120721
+    );
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
   width:min(560px,100%);
+
   max-height:90vh;
+
   overflow-y:auto;
+
   border-radius:20px;
+
   padding:27px;
-  box-shadow:0 25px 80px rgba(0,0,0,.5);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.5);
+
 }
+
 
 .modal-title{
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
   margin-bottom:22px;
+
 }
+
 
 .modal-title h2{
+
   font-size:23px;
+
 }
+
 
 .close-modal{
+
   border:0;
+
   background:none;
+
   color:white;
+
   font-size:29px;
+
 }
+
 
 .form-group{
+
   margin-bottom:16px;
+
 }
 
+
 .form-group label{
+
   display:block;
+
   font-size:13px;
+
   font-weight:800;
+
   margin-bottom:7px;
-  color:var(--blanco-secundario);
+
+  color:
+    var(--blanco-secundario);
+
 }
+
 
 .form-group input,
 .form-group textarea{
+
   width:100%;
+
   padding:13px;
-  border:1px solid rgba(255,255,255,.12);
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
   border-radius:9px;
+
   font-size:15px;
+
   outline:none;
-  background:var(--violeta-profundo);
+
+  background:
+    var(--violeta-profundo);
+
   color:white;
+
 }
+
 
 .form-group textarea{
+
   min-height:80px;
+
   resize:vertical;
+
 }
+
 
 .summary{
-  background:rgba(14,4,29,.65);
-  border:1px solid rgba(255,255,255,.07);
+
+  background:
+    rgba(14,4,29,.65);
+
+  border:
+    1px solid rgba(255,255,255,.07);
+
   padding:16px;
+
   border-radius:10px;
+
   margin:20px 0;
+
 }
+
 
 .summary-total{
+
   font-size:20px;
+
   font-weight:900;
+
   margin-top:12px;
+
   padding-top:12px;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:var(--naranja);
+
+  border-top:
+    1px solid rgba(255,255,255,.08);
+
+  color:
+    var(--naranja);
+
 }
+
 
 .send-order{
+
   width:100%;
+
   padding:15px;
+
   border:0;
+
   border-radius:10px;
-  background:linear-gradient(
-    135deg,
-    #20C969,
-    #25D366
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      #20C969,
+      #25D366
+    );
+
   color:white;
+
   font-size:16px;
+
   font-weight:900;
+
 }
 
+
 .send-order:disabled{
+
   opacity:.6;
+
   cursor:not-allowed;
+
 }
+
 
 /* =====================================================
    WHATSAPP
 ===================================================== */
 
 .whatsapp-float{
+
   position:fixed;
+
   right:22px;
+
   bottom:22px;
+
   width:58px;
+
   height:58px;
+
   border-radius:50%;
+
   background:#25D366;
+
   color:white;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   text-decoration:none;
+
   font-size:30px;
-  box-shadow:0 8px 25px rgba(0,0,0,.35);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.35);
+
   z-index:1500;
+
 }
+
 
 /* =====================================================
    FOOTER
 ===================================================== */
 
 footer{
+
   background:#090212;
-  border-top:1px solid rgba(255,255,255,.06);
+
+  border-top:
+    1px solid rgba(255,255,255,.06);
+
   padding:35px 20px;
+
   text-align:center;
+
   color:var(--gris);
+
   font-size:13px;
+
 }
+
 
 footer strong{
-  color:var(--naranja);
+
+  color:
+    var(--naranja);
+
 }
 
+
 .footer-contact{
+
   margin-top:15px;
+
   display:flex;
+
   flex-wrap:wrap;
+
   justify-content:center;
+
   gap:10px 25px;
+
 }
+
 
 .footer-contact a,
 .footer-address a{
-  color:var(--blanco-secundario);
+
+  color:
+    var(--blanco-secundario);
+
   text-decoration:none;
+
 }
 
+
 .footer-address{
+
   margin-top:12px;
+
 }
+
 
 /* =====================================================
    RESPONSIVE
@@ -905,142 +1643,245 @@ footer strong{
 @media(max-width:850px){
 
   .header-inner{
+
     min-height:72px;
+
     padding:9px 15px;
+
     gap:10px;
+
   }
+
 
   .header-logo{
+
     min-width:auto;
+
   }
+
 
   .header-logo img{
+
     width:150px;
+
   }
+
 
   .header-title{
+
     display:none;
+
   }
+
 
   .header-cart{
+
     min-width:auto;
+
   }
+
 
   .cart-button{
+
     padding:9px 12px;
+
   }
+
 
   .hero-inner{
+
     grid-template-columns:1fr;
+
     text-align:center;
+
   }
+
 
   .hero-content{
+
     text-align:center;
+
   }
+
 
   .hero p{
+
     margin:auto;
+
   }
 
+
   .philosophy-grid{
+
     grid-template-columns:1fr;
+
   }
 
 }
 
+
 @media(max-width:600px){
 
   .header-inner{
+
     padding:8px 10px;
+
   }
+
 
   .header-logo img{
+
     width:125px;
+
   }
+
 
   .cart-button{
+
     padding:8px 10px;
+
     font-size:12px;
+
   }
+
 
   .cart-icon{
+
     font-size:18px;
+
   }
+
 
   .hero{
+
     min-height:510px;
+
   }
+
 
   .hero-inner{
+
     padding:45px 18px;
+
   }
+
 
   .hero h1{
+
     font-size:30px;
+
   }
+
 
   .hero p{
+
     font-size:14px;
+
   }
+
 
   .hero-logo{
+
     width:90%;
+
     max-height:210px;
+
   }
+
 
   .container{
-    padding:35px 14px 60px;
+
+    padding:
+      35px 14px 60px;
+
   }
+
 
   .products-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
     gap:12px;
+
   }
+
 
   .product-image{
+
     height:150px;
+
   }
+
 
   .product-info{
+
     padding:13px;
+
   }
+
 
   .product-name{
+
     font-size:14px;
+
   }
+
 
   .product-description{
+
     font-size:11px;
+
   }
+
 
   .price{
+
     font-size:16px;
+
   }
+
 
   .add-button{
+
     padding:9px;
+
     font-size:11px;
+
   }
+
 
   .philosophy{
-    padding:25px 18px;
+
+    padding:
+      25px 18px;
+
   }
 
+
   .whatsapp-float{
+
     right:16px;
+
     bottom:16px;
+
     width:54px;
+
     height:54px;
+
     font-size:27px;
+
   }
 
 }
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -1049,6 +1890,7 @@ footer strong{
 <header>
 
   <div class="header-inner">
+
 
     <div class="header-logo">
 
@@ -1061,11 +1903,12 @@ footer strong{
 
 
     <div class="header-title">
+
       IMPERIO PACK JD
+
     </div>
 
 
-    <!-- CARRITO -->
     <div class="header-cart">
 
       <button
@@ -1074,11 +1917,17 @@ footer strong{
         onclick="abrirCarrito()"
       >
 
-        <span class="cart-icon">🛒</span>
+        <span class="cart-icon">
+          🛒
+        </span>
 
-        <span>Carrito</span>
+        <span>
+          Carrito
+        </span>
 
-        <span id="cartCount">0</span>
+        <span id="cartCount">
+          0
+        </span>
 
       </button>
 
@@ -1093,9 +1942,13 @@ footer strong{
      HERO
 ===================================================== -->
 
-<section class="hero" id="inicio">
+<section
+  class="hero"
+  id="inicio"
+>
 
   <div class="hero-inner">
+
 
     <div class="hero-content">
 
@@ -1108,6 +1961,7 @@ footer strong{
         </span>
 
       </h1>
+
 
       <p>
 
@@ -1144,6 +1998,7 @@ footer strong{
   id="productos"
 >
 
+
   <div class="section-title">
 
     <h2>
@@ -1158,6 +2013,7 @@ footer strong{
 
 
   <div class="tools">
+
 
     <input
       id="search"
@@ -1201,16 +2057,22 @@ footer strong{
   </div>
 
 
-  <!-- FILOSOFIA -->
+  <!-- =================================================
+       FILOSOFIA
+  ================================================== -->
 
   <section class="philosophy">
 
+
     <div class="philosophy-title">
+
       Nuestra Filosofía
+
     </div>
 
 
     <div class="philosophy-grid">
+
 
       <div class="philosophy-item">
 
@@ -1280,16 +2142,19 @@ footer strong{
   onclick="cerrarCarritoSiCorresponde(event)"
 >
 
+
   <aside
     class="cart"
     onclick="event.stopPropagation()"
   >
+
 
     <div class="cart-header">
 
       <h2>
         🛒 Mi carrito
       </h2>
+
 
       <button
         type="button"
@@ -1311,6 +2176,7 @@ footer strong{
 
 
     <div class="cart-footer">
+
 
       <div class="cart-total">
 
@@ -1351,13 +2217,16 @@ footer strong{
   class="modal"
 >
 
+
   <div class="modal-box">
+
 
     <div class="modal-title">
 
       <h2>
         Finalizar pedido
       </h2>
+
 
       <button
         type="button"
@@ -1374,7 +2243,10 @@ footer strong{
 
     <div class="summary">
 
-      <div id="checkoutSummary"></div>
+      <div
+        id="checkoutSummary"
+      ></div>
+
 
       <div
         id="checkoutTotal"
@@ -1501,23 +2373,33 @@ footer strong{
 
 <footer>
 
+
   <strong>
     IMPERIO PACK JD
   </strong>
 
+
   <div style="margin-top:8px;">
+
     Todo para tu negocio.
+
   </div>
 
 
   <div class="footer-contact">
 
+
     <a href="tel:+5493585123173">
+
       📞 +54 9 3585 12-3173
+
     </a>
 
+
     <a href="mailto:imperiopack.r4@gmail.com">
+
       ✉️ imperiopack.r4@gmail.com
+
     </a>
 
   </div>
@@ -1550,13 +2432,22 @@ footer strong{
 
 /*
  * =====================================================
- * API GOOGLE APPS SCRIPT
+ * CONFIGURACION API
  * =====================================================
+ *
+ * ESTA ES LA URL DE TU GOOGLE APPS SCRIPT
+ *
  */
 
 const API_URL =
   'https://script.google.com/macros/s/AKfycbz-JxoQeERvDGQANlyQLLP0k43PontgKTVNObM316sAMSLgwwSeYKGFSDfdoEd5XZS2/exec';
 
+
+/*
+ * =====================================================
+ * VARIABLES
+ * =====================================================
+ */
 
 let productos = [];
 
@@ -1565,9 +2456,11 @@ let carrito = [];
 let categoriaActual = 'TODOS';
 
 
-/* =====================================================
-   INICIO
-===================================================== */
+/*
+ * =====================================================
+ * INICIO
+ * =====================================================
+ */
 
 document.addEventListener(
   'DOMContentLoaded',
@@ -1581,9 +2474,11 @@ document.addEventListener(
 );
 
 
-/* =====================================================
-   CARGAR PRODUCTOS
-===================================================== */
+/*
+ * =====================================================
+ * CARGAR PRODUCTOS
+ * =====================================================
+ */
 
 async function cargarProductos(){
 
@@ -1592,61 +2487,196 @@ async function cargarProductos(){
 
 
   contenedor.innerHTML = `
+
     <div class="loading">
+
       ⏳ Cargando productos...
+
     </div>
+
   `;
 
 
   try{
 
+    /*
+     * IMPORTANTE:
+     *
+     * La consulta se realiza directamente
+     * a la API de Apps Script.
+     */
+
+    const url =
+      API_URL +
+      '?api=productos';
+
+
+    console.log(
+      'Consultando API:',
+      url
+    );
+
+
     const respuesta =
       await fetch(
-        API_URL + '?api=productos'
+        url,
+        {
+          method:'GET',
+          cache:'no-store'
+        }
       );
+
+
+    console.log(
+      'Estado API:',
+      respuesta.status
+    );
 
 
     if(!respuesta.ok){
 
       throw new Error(
-        'No se pudo conectar con el servidor.'
+        'El servidor respondió con estado ' +
+        respuesta.status
       );
 
     }
 
 
-    const data =
-      await respuesta.json();
+    const texto =
+      await respuesta.text();
+
+
+    console.log(
+      'Respuesta API:',
+      texto
+    );
+
+
+    let data;
+
+
+    try{
+
+      data =
+        JSON.parse(texto);
+
+    }
+
+    catch(error){
+
+      throw new Error(
+        'La respuesta del servidor no es un JSON válido.'
+      );
+
+    }
 
 
     if(
       !data ||
-      !data.correcto
+      data.correcto !== true
     ){
 
       throw new Error(
-        data && data.mensaje
+
+        data &&
+        data.mensaje
+
           ? data.mensaje
+
           : 'La API no devolvió los productos.'
+
       );
 
     }
 
 
+    if(
+      !Array.isArray(
+        data.productos
+      )
+    ){
+
+      throw new Error(
+        'La API no devolvió una lista de productos.'
+      );
+
+    }
+
+
+    /*
+     * Guardamos productos
+     */
+
     productos =
-      data.productos || [];
+      data.productos.map(
+        function(producto){
+
+          return {
+
+            ID:
+              String(
+                producto.ID || ''
+              ),
+
+            PRODUCTO:
+              String(
+                producto.PRODUCTO || ''
+              ),
+
+            CATEGORIA:
+              String(
+                producto.CATEGORIA || 'Otros'
+              ),
+
+            PRECIO:
+              Number(
+                producto.PRECIO || 0
+              ),
+
+            STOCK:
+              Number(
+                producto.STOCK || 0
+              ),
+
+            IMAGEN:
+              String(
+                producto.IMAGEN || ''
+              ),
+
+            DESCRIPCION:
+              String(
+                producto.DESCRIPCION || ''
+              ),
+
+            ACTIVO:
+              String(
+                producto.ACTIVO || 'SI'
+              )
+
+          };
+
+        }
+      );
+
+
+    console.log(
+      'Productos cargados:',
+      productos
+    );
 
 
     crearCategorias();
 
     mostrarProductos();
 
+
   }
 
   catch(error){
 
     console.error(
-      'Error cargando productos:',
+      'ERROR CARGANDO PRODUCTOS:',
       error
     );
 
@@ -1664,8 +2694,33 @@ async function cargarProductos(){
         <br><br>
 
         <small>
-          ${escapeHtml(error.message)}
+          ${escapeHtml(
+            error.message
+          )}
         </small>
+
+        <br><br>
+
+        <button
+          type="button"
+          onclick="cargarProductos()"
+          style="
+            padding:12px 20px;
+            border:0;
+            border-radius:10px;
+            background:linear-gradient(
+              135deg,
+              #B92C82,
+              #FF7043
+            );
+            color:white;
+            font-weight:900;
+          "
+        >
+
+          🔄 REINTENTAR
+
+        </button>
 
       </div>
 
@@ -1676,9 +2731,11 @@ async function cargarProductos(){
 }
 
 
-/* =====================================================
-   CATEGORIAS
-===================================================== */
+/*
+ * =====================================================
+ * CATEGORIAS
+ * =====================================================
+ */
 
 function crearCategorias(){
 
@@ -1691,8 +2748,12 @@ function crearCategorias(){
   contenedor.innerHTML = `
 
     <button
+      type="button"
       class="category active"
-      onclick="seleccionarCategoria('TODOS', this)"
+      onclick="seleccionarCategoria(
+        'TODOS',
+        this
+      )"
     >
 
       Todos
@@ -1709,7 +2770,11 @@ function crearCategorias(){
       productos
 
         .map(
-          p => p.CATEGORIA
+          function(producto){
+
+            return producto.CATEGORIA;
+
+          }
         )
 
         .filter(Boolean)
@@ -1726,6 +2791,10 @@ function crearCategorias(){
         document.createElement(
           'button'
         );
+
+
+      button.type =
+        'button';
 
 
       button.className =
@@ -1757,9 +2826,11 @@ function crearCategorias(){
 }
 
 
-/* =====================================================
-   CATEGORIA
-===================================================== */
+/*
+ * =====================================================
+ * SELECCIONAR CATEGORIA
+ * =====================================================
+ */
 
 function seleccionarCategoria(
   categoria,
@@ -1785,9 +2856,13 @@ function seleccionarCategoria(
     );
 
 
-  button.classList.add(
-    'active'
-  );
+  if(button){
+
+    button.classList.add(
+      'active'
+    );
+
+  }
 
 
   mostrarProductos();
@@ -1795,9 +2870,11 @@ function seleccionarCategoria(
 }
 
 
-/* =====================================================
-   BUSCAR
-===================================================== */
+/*
+ * =====================================================
+ * BUSCADOR
+ * =====================================================
+ */
 
 function filtrarProductos(){
 
@@ -1806,9 +2883,11 @@ function filtrarProductos(){
 }
 
 
-/* =====================================================
-   MOSTRAR PRODUCTOS
-===================================================== */
+/*
+ * =====================================================
+ * MOSTRAR PRODUCTOS
+ * =====================================================
+ */
 
 function mostrarProductos(){
 
@@ -1818,12 +2897,18 @@ function mostrarProductos(){
     );
 
 
+  const inputBusqueda =
+    document.getElementById(
+      'search'
+    );
+
+
   const busqueda =
-    document
-      .getElementById('search')
-      .value
-      .toLowerCase()
-      .trim();
+    inputBusqueda
+      ? inputBusqueda.value
+          .toLowerCase()
+          .trim()
+      : '';
 
 
   const filtrados =
@@ -1831,9 +2916,15 @@ function mostrarProductos(){
       function(producto){
 
         const coincideCategoria =
+
           categoriaActual === 'TODOS' ||
-          producto.CATEGORIA ===
-          categoriaActual;
+
+          String(
+            producto.CATEGORIA
+          ) ===
+          String(
+            categoriaActual
+          );
 
 
         const texto = (
@@ -1848,15 +2939,19 @@ function mostrarProductos(){
 
 
         const coincideBusqueda =
+
           !busqueda ||
+
           texto.includes(
             busqueda
           );
 
 
         return (
+
           coincideCategoria &&
           coincideBusqueda
+
         );
 
       }
@@ -1888,9 +2983,11 @@ function mostrarProductos(){
     function(producto){
 
       contenedor.appendChild(
+
         crearTarjetaProducto(
           producto
         )
+
       );
 
     }
@@ -1899,9 +2996,11 @@ function mostrarProductos(){
 }
 
 
-/* =====================================================
-   TARJETA
-===================================================== */
+/*
+ * =====================================================
+ * CREAR TARJETA
+ * =====================================================
+ */
 
 function crearTarjetaProducto(
   producto
@@ -1920,16 +3019,35 @@ function crearTarjetaProducto(
   let imagen = '';
 
 
-  if(producto.IMAGEN){
+  if(
+    producto.IMAGEN &&
+    producto.IMAGEN.trim()
+  ){
 
     imagen = `
 
       <img
-        src="${escapeHtml(producto.IMAGEN)}"
-        alt="${escapeHtml(producto.PRODUCTO)}"
+        src="${escapeHtml(
+          producto.IMAGEN
+        )}"
+        alt="${escapeHtml(
+          producto.PRODUCTO
+        )}"
         loading="lazy"
-        onerror="this.style.display='none';"
+        onerror="
+          this.style.display='none';
+          this.parentElement
+            .querySelector('.placeholder')
+            .style.display='block';
+        "
       >
+
+      <div
+        class="placeholder"
+        style="display:none;"
+      >
+        📦
+      </div>
 
     `;
 
@@ -1938,9 +3056,13 @@ function crearTarjetaProducto(
   else{
 
     imagen = `
+
       <div class="placeholder">
+
         📦
+
       </div>
+
     `;
 
   }
@@ -1963,6 +3085,7 @@ function crearTarjetaProducto(
 
     <div class="product-info">
 
+
       <div class="product-category">
 
         ${escapeHtml(
@@ -1983,6 +3106,7 @@ function crearTarjetaProducto(
 
       ${
         producto.DESCRIPCION
+
         ? `
 
           <div class="product-description">
@@ -1994,11 +3118,14 @@ function crearTarjetaProducto(
           </div>
 
         `
+
         : ''
+
       }
 
 
       <div class="product-bottom">
+
 
         <div class="price">
 
@@ -2015,7 +3142,9 @@ function crearTarjetaProducto(
           ? `
 
             <div class="out-stock">
+
               SIN STOCK
+
             </div>
 
           `
@@ -2025,7 +3154,13 @@ function crearTarjetaProducto(
             <button
               type="button"
               class="add-button"
-              onclick="agregarAlCarrito('${escapeJs(producto.ID)}')"
+              onclick="
+                agregarAlCarrito(
+                  '${escapeJs(
+                    producto.ID
+                  )}'
+                )
+              "
             >
 
               + AGREGAR
@@ -2033,6 +3168,7 @@ function crearTarjetaProducto(
             </button>
 
           `
+
         }
 
       </div>
@@ -2047,23 +3183,30 @@ function crearTarjetaProducto(
 }
 
 
-/* =====================================================
-   AGREGAR
-===================================================== */
+/*
+ * =====================================================
+ * AGREGAR AL CARRITO
+ * =====================================================
+ */
 
-function agregarAlCarrito(
-  id
-){
+function agregarAlCarrito(id){
 
   const producto =
     productos.find(
-      p =>
-        String(p.ID) ===
-        String(id)
+      function(p){
+
+        return String(p.ID) ===
+          String(id);
+
+      }
     );
 
 
   if(!producto){
+
+    alert(
+      'No se encontró el producto.'
+    );
 
     return;
 
@@ -2072,9 +3215,12 @@ function agregarAlCarrito(
 
   const existente =
     carrito.find(
-      item =>
-        String(item.id) ===
-        String(id)
+      function(item){
+
+        return String(item.id) ===
+          String(id);
+
+      }
     );
 
 
@@ -2132,9 +3278,11 @@ function agregarAlCarrito(
 }
 
 
-/* =====================================================
-   ACTUALIZAR CARRITO
-===================================================== */
+/*
+ * =====================================================
+ * ACTUALIZAR CARRITO
+ * =====================================================
+ */
 
 function actualizarCarrito(){
 
@@ -2223,6 +3371,7 @@ function actualizarCarrito(){
 
         <div>
 
+
           <div class="cart-item-name">
 
             ${escapeHtml(
@@ -2244,7 +3393,11 @@ function actualizarCarrito(){
           <button
             type="button"
             class="remove"
-            onclick="eliminarDelCarrito(${index})"
+            onclick="
+              eliminarDelCarrito(
+                ${index}
+              )
+            "
           >
 
             Eliminar
@@ -2256,24 +3409,41 @@ function actualizarCarrito(){
 
         <div class="quantity">
 
+
           <button
             type="button"
-            onclick="cambiarCantidad(${index},-1)"
+            onclick="
+              cambiarCantidad(
+                ${index},
+                -1
+              )
+            "
           >
+
             −
+
           </button>
 
 
           <strong>
+
             ${item.cantidad}
+
           </strong>
 
 
           <button
             type="button"
-            onclick="cambiarCantidad(${index},1)"
+            onclick="
+              cambiarCantidad(
+                ${index},
+                1
+              )
+            "
           >
+
             +
+
           </button>
 
         </div>
@@ -2300,9 +3470,11 @@ function actualizarCarrito(){
 }
 
 
-/* =====================================================
-   CANTIDAD
-===================================================== */
+/*
+ * =====================================================
+ * CAMBIAR CANTIDAD
+ * =====================================================
+ */
 
 function cambiarCantidad(
   index,
@@ -2362,9 +3534,11 @@ function cambiarCantidad(
 }
 
 
-/* =====================================================
-   ELIMINAR
-===================================================== */
+/*
+ * =====================================================
+ * ELIMINAR
+ * =====================================================
+ */
 
 function eliminarDelCarrito(
   index
@@ -2381,9 +3555,11 @@ function eliminarDelCarrito(
 }
 
 
-/* =====================================================
-   ABRIR CARRITO
-===================================================== */
+/*
+ * =====================================================
+ * ABRIR CARRITO
+ * =====================================================
+ */
 
 function abrirCarrito(){
 
@@ -2398,9 +3574,11 @@ function abrirCarrito(){
 }
 
 
-/* =====================================================
-   CERRAR CARRITO
-===================================================== */
+/*
+ * =====================================================
+ * CERRAR CARRITO
+ * =====================================================
+ */
 
 function cerrarCarrito(){
 
@@ -2431,9 +3609,11 @@ function cerrarCarritoSiCorresponde(
 }
 
 
-/* =====================================================
-   CHECKOUT
-===================================================== */
+/*
+ * =====================================================
+ * ABRIR CHECKOUT
+ * =====================================================
+ */
 
 function abrirCheckout(){
 
@@ -2531,9 +3711,11 @@ function abrirCheckout(){
 }
 
 
-/* =====================================================
-   CERRAR CHECKOUT
-===================================================== */
+/*
+ * =====================================================
+ * CERRAR CHECKOUT
+ * =====================================================
+ */
 
 function cerrarCheckout(){
 
@@ -2548,9 +3730,11 @@ function cerrarCheckout(){
 }
 
 
-/* =====================================================
-   TOTAL
-===================================================== */
+/*
+ * =====================================================
+ * TOTAL
+ * =====================================================
+ */
 
 function calcularTotal(){
 
@@ -2570,9 +3754,11 @@ function calcularTotal(){
 }
 
 
-/* =====================================================
-   CONFIRMAR PEDIDO
-===================================================== */
+/*
+ * =====================================================
+ * CONFIRMAR PEDIDO
+ * =====================================================
+ */
 
 async function confirmarPedido(){
 
@@ -2691,6 +3877,7 @@ async function confirmarPedido(){
 
 
     productos:
+
       carrito.map(
         function(item){
 
@@ -2720,8 +3907,10 @@ async function confirmarPedido(){
           method:'POST',
 
           headers:{
+
             'Content-Type':
               'text/plain;charset=utf-8'
+
           },
 
           body:
@@ -2743,10 +3932,14 @@ async function confirmarPedido(){
     ){
 
       throw new Error(
+
         resultado &&
         resultado.mensaje
+
           ? resultado.mensaje
+
           : 'No se pudo registrar el pedido.'
+
       );
 
     }
@@ -2817,9 +4010,11 @@ async function confirmarPedido(){
 }
 
 
-/* =====================================================
-   PRECIO
-===================================================== */
+/*
+ * =====================================================
+ * FORMATEAR PRECIO
+ * =====================================================
+ */
 
 function formatearPrecio(
   numero
@@ -2834,9 +4029,11 @@ function formatearPrecio(
 }
 
 
-/* =====================================================
-   SEGURIDAD
-===================================================== */
+/*
+ * =====================================================
+ * ESCAPE HTML
+ * =====================================================
+ */
 
 function escapeHtml(
   texto
@@ -2874,6 +4071,12 @@ function escapeHtml(
 }
 
 
+/*
+ * =====================================================
+ * ESCAPE JAVASCRIPT
+ * =====================================================
+ */
+
 function escapeJs(
   texto
 ){
@@ -2897,4 +4100,5 @@ function escapeJs(
 </script>
 
 </body>
+
 </html>
