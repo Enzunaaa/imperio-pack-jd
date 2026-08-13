@@ -10,11 +10,26 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>IMPERIO PACK JD</title>
+  <title>IMPERIO PACK JD | Todo para tu negocio</title>
 
   <meta
     name="description"
-    content="Imperio Pack JD - Todo para tu negocio."
+    content="Imperio Pack JD - Todo lo que necesitás para tu negocio en un solo lugar."
+  >
+
+  <meta
+    name="theme-color"
+    content="#0E041D"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="icon"
+    href="https://i.ibb.co/ZzNpTFd4/logo-imperio-completo.png"
   >
 
   <style>
@@ -22,16 +37,24 @@
     :root {
 
       --fondo: #0E041D;
+      --fondo-secundario: #130622;
       --violeta-profundo: #1A0C2F;
       --violeta: #3A145C;
       --purpura: #5A197D;
       --magenta: #B92C82;
+
       --naranja: #FF9F3D;
       --naranja-fuerte: #FF7043;
+      --naranja-claro: #FFC16D;
 
       --blanco: #FFFFFF;
       --blanco-secundario: #D9D4E2;
       --gris: #9C94A8;
+
+      --verde: #25D366;
+      --rojo: #FF6B6B;
+
+      --radio: 18px;
 
     }
 
@@ -67,7 +90,19 @@
       color:
         var(--blanco);
 
-      min-height: 100vh;
+      min-height:
+        100vh;
+
+      overflow-x:
+        hidden;
+
+    }
+
+
+    body.modal-open {
+
+      overflow:
+        hidden;
 
     }
 
@@ -76,14 +111,16 @@
     input,
     textarea {
 
-      font-family: inherit;
+      font-family:
+        inherit;
 
     }
 
 
     button {
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
     }
 
@@ -94,17 +131,20 @@
 
     header {
 
-      position: sticky;
+      position:
+        sticky;
 
-      top: 0;
+      top:
+        0;
 
-      z-index: 1000;
+      z-index:
+        1000;
 
       background:
         rgba(14,4,29,.96);
 
       backdrop-filter:
-        blur(15px);
+        blur(16px);
 
       border-bottom:
         1px solid
@@ -118,6 +158,9 @@
 
 
     .header-inner {
+
+      width:
+        100%;
 
       max-width:
         1250px;
@@ -177,8 +220,6 @@
     }
 
 
-    /* NOMBRE CENTRAL */
-
     .header-title {
 
       flex:
@@ -222,8 +263,6 @@
 
     }
 
-
-    /* CARRITO */
 
     .cart-button {
 
@@ -331,7 +370,7 @@
         hidden;
 
       min-height:
-        460px;
+        500px;
 
       display:
         flex;
@@ -373,10 +412,10 @@
         absolute;
 
       width:
-        500px;
+        550px;
 
       height:
-        500px;
+        550px;
 
       border-radius:
         50%;
@@ -389,10 +428,10 @@
         );
 
       top:
-        -250px;
+        -280px;
 
       right:
-        -150px;
+        -170px;
 
       pointer-events:
         none;
@@ -409,10 +448,10 @@
         absolute;
 
       width:
-        450px;
+        500px;
 
       height:
-        450px;
+        500px;
 
       border-radius:
         50%;
@@ -425,10 +464,10 @@
         );
 
       bottom:
-        -250px;
+        -280px;
 
       left:
-        -120px;
+        -150px;
 
       pointer-events:
         none;
@@ -454,7 +493,7 @@
         auto;
 
       padding:
-        55px 25px;
+        70px 25px;
 
       display:
         grid;
@@ -466,7 +505,7 @@
         center;
 
       gap:
-        40px;
+        50px;
 
     }
 
@@ -475,6 +514,176 @@
 
       text-align:
         left;
+
+    }
+
+
+    .hero-badge {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      gap:
+        8px;
+
+      margin-bottom:
+        20px;
+
+      padding:
+        8px 14px;
+
+      border:
+        1px solid
+        rgba(255,159,61,.25);
+
+      border-radius:
+        30px;
+
+      background:
+        rgba(255,255,255,.05);
+
+      color:
+        var(--naranja);
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        1px;
+
+    }
+
+
+    .hero h1 {
+
+      font-size:
+        clamp(
+          34px,
+          5vw,
+          58px
+        );
+
+      line-height:
+        1.04;
+
+      font-weight:
+        950;
+
+      margin-bottom:
+        20px;
+
+    }
+
+
+    .hero h1 span {
+
+      display:
+        block;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--magenta),
+          var(--naranja)
+        );
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+    }
+
+
+    .hero p {
+
+      color:
+        var(--blanco-secundario);
+
+      max-width:
+        600px;
+
+      font-size:
+        17px;
+
+      line-height:
+        1.65;
+
+      margin-bottom:
+        28px;
+
+    }
+
+
+    .hero-actions {
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        12px;
+
+    }
+
+
+    .hero-button {
+
+      border:
+        0;
+
+      padding:
+        13px 20px;
+
+      border-radius:
+        11px;
+
+      font-weight:
+        900;
+
+      color:
+        white;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--magenta),
+          var(--naranja-fuerte)
+        );
+
+      box-shadow:
+        0 10px 30px
+        rgba(255,112,67,.18);
+
+      transition:
+        .25s;
+
+    }
+
+
+    .hero-button:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 15px 35px
+        rgba(255,112,67,.28);
 
     }
 
@@ -490,9 +699,6 @@
       justify-content:
         center;
 
-      order:
-        2;
-
     }
 
 
@@ -505,7 +711,7 @@
         );
 
       max-height:
-        300px;
+        330px;
 
       object-fit:
         contain;
@@ -554,73 +760,14 @@
     }
 
 
-    .hero h1 {
-
-      font-size:
-        clamp(
-          30px,
-          5vw,
-          55px
-        );
-
-      line-height:
-        1.05;
-
-      font-weight:
-        950;
-
-      margin-bottom:
-        18px;
-
-    }
-
-
-    .hero h1 span {
-
-      display:
-        block;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--magenta),
-          var(--naranja)
-        );
-
-      -webkit-background-clip:
-        text;
-
-      background-clip:
-        text;
-
-      color:
-        transparent;
-
-    }
-
-
-    .hero p {
-
-      color:
-        var(--blanco-secundario);
-
-      max-width:
-        620px;
-
-      font-size:
-        17px;
-
-      line-height:
-        1.65;
-
-    }
-
-
     /* =====================================================
        CONTENIDO
        ===================================================== */
 
     .container {
+
+      width:
+        100%;
 
       max-width:
         1250px;
@@ -629,7 +776,7 @@
         auto;
 
       padding:
-        45px 25px 70px;
+        55px 25px 75px;
 
     }
 
@@ -640,7 +787,7 @@
         center;
 
       margin-bottom:
-        28px;
+        30px;
 
     }
 
@@ -869,7 +1016,7 @@
         rgba(255,255,255,.08);
 
       border-radius:
-        18px;
+        var(--radio);
 
       overflow:
         hidden;
@@ -933,6 +1080,9 @@
 
       overflow:
         hidden;
+
+      position:
+        relative;
 
     }
 
@@ -1083,7 +1233,7 @@
         linear-gradient(
           90deg,
           var(--naranja),
-          #FFC16D
+          var(--naranja-claro)
         );
 
       -webkit-background-clip:
@@ -1143,7 +1293,7 @@
     .out-stock {
 
       color:
-        #FF7B7B;
+        var(--rojo);
 
       font-size:
         12px;
@@ -1178,10 +1328,10 @@
     .philosophy {
 
       margin-top:
-        55px;
+        60px;
 
       padding:
-        35px;
+        38px;
 
       border-radius:
         20px;
@@ -1206,7 +1356,7 @@
         center;
 
       margin-bottom:
-        28px;
+        30px;
 
       font-size:
         28px;
@@ -1534,7 +1684,7 @@
         none;
 
       color:
-        #FF7B7B;
+        var(--rojo);
 
       font-size:
         12px;
@@ -1614,6 +1764,14 @@
 
       font-weight:
         900;
+
+    }
+
+
+    .checkout-button:hover {
+
+      transform:
+        translateY(-1px);
 
     }
 
@@ -1812,6 +1970,19 @@
     }
 
 
+    .form-group input:focus,
+    .form-group textarea:focus {
+
+      border-color:
+        var(--naranja);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(255,159,61,.07);
+
+    }
+
+
     .form-group textarea {
 
       min-height:
@@ -1937,7 +2108,7 @@
         50%;
 
       background:
-        #25D366;
+        var(--verde);
 
       color:
         white;
@@ -1992,7 +2163,7 @@
         rgba(255,255,255,.06);
 
       padding:
-        35px 20px;
+        40px 20px;
 
       text-align:
         center;
@@ -2034,7 +2205,8 @@
     }
 
 
-    .footer-contact a {
+    .footer-contact a,
+    .footer-address a {
 
       color:
         var(--blanco-secundario);
@@ -2045,7 +2217,8 @@
     }
 
 
-    .footer-contact a:hover {
+    .footer-contact a:hover,
+    .footer-address a:hover {
 
       color:
         var(--naranja);
@@ -2061,21 +2234,91 @@
     }
 
 
-    .footer-address a {
+    .footer-copy {
 
-      color:
-        var(--blanco-secundario);
+      margin-top:
+        20px;
 
-      text-decoration:
-        none;
+      padding-top:
+        18px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.06);
+
+      font-size:
+        11px;
 
     }
 
 
-    .footer-address a:hover {
+    /* =====================================================
+       TOAST
+       ===================================================== */
+
+    .toast {
+
+      position:
+        fixed;
+
+      left:
+        50%;
+
+      bottom:
+        25px;
+
+      transform:
+        translate(-50%, 120px);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--violeta),
+          var(--purpura)
+        );
+
+      border:
+        1px solid
+        rgba(255,159,61,.25);
 
       color:
-        var(--naranja);
+        white;
+
+      padding:
+        13px 20px;
+
+      border-radius:
+        12px;
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+      z-index:
+        5000;
+
+      opacity:
+        0;
+
+      transition:
+        .3s;
+
+      box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.35);
+
+    }
+
+
+    .toast.show {
+
+      opacity:
+        1;
+
+      transform:
+        translate(-50%, 0);
 
     }
 
@@ -2131,16 +2374,16 @@
         text-align:
           center;
 
-        order:
-          1;
-
       }
 
 
-      .hero-logo-container {
+      .hero-badge {
 
-        order:
-          2;
+        margin-left:
+          auto;
+
+        margin-right:
+          auto;
 
       }
 
@@ -2148,7 +2391,15 @@
       .hero p {
 
         margin:
-          auto;
+          0 auto 28px;
+
+      }
+
+
+      .hero-actions {
+
+        justify-content:
+          center;
 
       }
 
@@ -2185,8 +2436,8 @@
 
       .header-title {
 
-        font-size:
-          15px;
+        display:
+          none;
 
       }
 
@@ -2194,7 +2445,7 @@
       .cart-button {
 
         padding:
-          8px 9px;
+          8px 10px;
 
         font-size:
           11px;
@@ -2205,7 +2456,7 @@
       .hero {
 
         min-height:
-          510px;
+          570px;
 
       }
 
@@ -2215,13 +2466,16 @@
         padding:
           45px 18px;
 
+        gap:
+          30px;
+
       }
 
 
       .hero h1 {
 
         font-size:
-          30px;
+          31px;
 
       }
 
@@ -2240,7 +2494,7 @@
           90%;
 
         max-height:
-          210px;
+          220px;
 
       }
 
@@ -2248,7 +2502,15 @@
       .container {
 
         padding:
-          35px 14px 60px;
+          38px 14px 60px;
+
+      }
+
+
+      .section-title h2 {
+
+        font-size:
+          27px;
 
       }
 
@@ -2345,6 +2607,25 @@
 
       }
 
+
+      .modal {
+
+        padding:
+          10px;
+
+      }
+
+
+      .modal-box {
+
+        padding:
+          20px;
+
+        border-radius:
+          16px;
+
+      }
+
     }
 
   </style>
@@ -2364,14 +2645,18 @@
     <div class="header-inner">
 
 
-      <div class="header-logo">
+      <a
+        href="#inicio"
+        class="header-logo"
+        aria-label="Imperio Pack JD - Inicio"
+      >
 
         <img
           src="https://i.ibb.co/ZzNpTFd4/logo-imperio-completo.png"
           alt="Imperio Pack JD"
         >
 
-      </div>
+      </a>
 
 
       <div class="header-title">
@@ -2384,6 +2669,7 @@
       <button
         class="cart-button"
         onclick="abrirCarrito()"
+        aria-label="Abrir carrito"
       >
 
         🛒 Carrito
@@ -2414,6 +2700,14 @@
 
       <div class="hero-content">
 
+
+        <div class="hero-badge">
+
+          ✦ Todo para tu negocio
+
+        </div>
+
+
         <h1>
 
           TODO LO QUE NECESITÁS,
@@ -2432,6 +2726,21 @@
           y recibilo de manera rápida y sencilla.
 
         </p>
+
+
+        <div class="hero-actions">
+
+          <button
+            class="hero-button"
+            onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})"
+          >
+
+            VER PRODUCTOS
+
+          </button>
+
+        </div>
+
 
       </div>
 
@@ -2484,6 +2793,7 @@
         type="text"
         placeholder="🔎 Buscar productos..."
         oninput="filtrarProductos()"
+        autocomplete="off"
       >
 
 
@@ -2514,7 +2824,7 @@
 
       <div class="loading">
 
-        Cargando productos...
+        ⏳ Cargando productos...
 
       </div>
 
@@ -2548,8 +2858,8 @@
 
             Nos posicionamos como un proveedor central y seguro.
             Nuestro compromiso es garantizar que siempre encuentres
-            los productos esenciales que tu negocio u hogar necesitan,
-            cuando los necesitan.
+            los productos esenciales que tu negocio necesita,
+            cuando los necesita.
 
           </p>
 
@@ -2625,6 +2935,7 @@
         <button
           class="close-cart"
           onclick="cerrarCarrito()"
+          aria-label="Cerrar carrito"
         >
 
           ×
@@ -2697,6 +3008,7 @@
         <button
           class="close-modal"
           onclick="cerrarCheckout()"
+          aria-label="Cerrar"
         >
 
           ×
@@ -2727,7 +3039,7 @@
 
       <div class="form-group">
 
-        <label>
+        <label for="customerName">
           Nombre y apellido *
         </label>
 
@@ -2735,6 +3047,7 @@
           id="customerName"
           type="text"
           placeholder="Ej: Juan Pérez"
+          autocomplete="name"
         >
 
       </div>
@@ -2742,7 +3055,7 @@
 
       <div class="form-group">
 
-        <label>
+        <label for="customerWhatsapp">
           WhatsApp *
         </label>
 
@@ -2750,6 +3063,7 @@
           id="customerWhatsapp"
           type="tel"
           placeholder="Ej: 3585123456"
+          autocomplete="tel"
         >
 
       </div>
@@ -2757,7 +3071,7 @@
 
       <div class="form-group">
 
-        <label>
+        <label for="customerEmail">
           Email
         </label>
 
@@ -2765,6 +3079,7 @@
           id="customerEmail"
           type="email"
           placeholder="tuemail@email.com"
+          autocomplete="email"
         >
 
       </div>
@@ -2772,7 +3087,7 @@
 
       <div class="form-group">
 
-        <label>
+        <label for="customerAddress">
           Dirección
         </label>
 
@@ -2780,6 +3095,7 @@
           id="customerAddress"
           type="text"
           placeholder="Dirección de entrega"
+          autocomplete="street-address"
         >
 
       </div>
@@ -2787,7 +3103,7 @@
 
       <div class="form-group">
 
-        <label>
+        <label for="customerNotes">
           Observaciones
         </label>
 
@@ -2816,7 +3132,7 @@
 
 
   <!-- =====================================================
-       WHATSAPP
+       WHATSAPP FLOTANTE
        ===================================================== -->
 
   <a
@@ -2896,10 +3212,28 @@
       </div>
 
 
+      <div class="footer-copy">
+
+        © <span id="currentYear"></span>
+        IMPERIO PACK JD. Todos los derechos reservados.
+
+      </div>
+
+
     </div>
 
 
   </footer>
+
+
+  <!-- =====================================================
+       TOAST
+       ===================================================== -->
+
+  <div
+    id="toast"
+    class="toast"
+  ></div>
 
 
   <!-- =====================================================
@@ -2909,15 +3243,17 @@
   <script>
 
 
-    /*
-     * =====================================================
-     * URL DE TU API
-     * =====================================================
-     */
+    /* =====================================================
+       URL DE TU API - GOOGLE APPS SCRIPT
+       ===================================================== */
 
     const API_URL =
       'https://script.google.com/macros/s/AKfycbzSzsU4PNstDMWekZYoTXQhHrIcPVAZDj4Ca9ERCxck-PWGTZhECRTaojT-TcpKxYVr/exec';
 
+
+    /* =====================================================
+       VARIABLES
+       ===================================================== */
 
     let productos = [];
 
@@ -2935,6 +3271,12 @@
       'DOMContentLoaded',
       function() {
 
+        document.getElementById(
+          'currentYear'
+        ).textContent =
+          new Date().getFullYear();
+
+
         cargarProductos();
 
         actualizarCarrito();
@@ -2944,7 +3286,7 @@
 
 
     /* =====================================================
-       CARGAR PRODUCTOS DESDE GOOGLE APPS SCRIPT
+       CARGAR PRODUCTOS
        ===================================================== */
 
     async function cargarProductos() {
@@ -3004,7 +3346,11 @@
 
 
         productos =
-          data.productos || [];
+          Array.isArray(
+            data.productos
+          )
+            ? data.productos
+            : [];
 
 
         crearCategorias();
@@ -3034,7 +3380,9 @@
             <br><br>
 
             <small>
-              ${escapeHtml(error.message)}
+              ${escapeHtml(
+                error.message
+              )}
             </small>
 
           </div>
@@ -3083,7 +3431,17 @@
               .filter(Boolean)
           )
         ]
-        .sort();
+        .sort(
+          function(a,b) {
+
+            return String(a)
+              .localeCompare(
+                String(b),
+                'es'
+              );
+
+          }
+        );
 
 
       categorias.forEach(
@@ -3163,7 +3521,7 @@
 
 
     /* =====================================================
-       BUSCAR
+       BUSCADOR
        ===================================================== */
 
     function filtrarProductos() {
@@ -3185,14 +3543,18 @@
         );
 
 
+      const searchInput =
+        document.getElementById(
+          'search'
+        );
+
+
       const busqueda =
-        document
-          .getElementById(
-            'search'
-          )
-          .value
-          .toLowerCase()
-          .trim();
+        searchInput
+          ? searchInput.value
+              .toLowerCase()
+              .trim()
+          : '';
 
 
       const filtrados =
@@ -3298,7 +3660,7 @@
               src="${escapeHtml(producto.IMAGEN)}"
               alt="${escapeHtml(producto.PRODUCTO)}"
               loading="lazy"
-              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'placeholder\\'>📦</div>';"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>📦</div>';"
             >
 
           `
@@ -3459,6 +3821,10 @@
 
           existente.cantidad++;
 
+          mostrarToast(
+            'Producto agregado al carrito.'
+          );
+
         }
 
         else {
@@ -3495,6 +3861,11 @@
             )
 
         });
+
+
+        mostrarToast(
+          'Producto agregado al carrito.'
+        );
 
       }
 
@@ -3689,7 +4060,7 @@
 
 
     /* =====================================================
-       CANTIDAD
+       CAMBIAR CANTIDAD
        ===================================================== */
 
     function cambiarCantidad(
@@ -3914,6 +4285,11 @@
           'open'
         );
 
+
+      document.body.classList.add(
+        'modal-open'
+      );
+
     }
 
 
@@ -3926,6 +4302,11 @@
         .classList.remove(
           'open'
         );
+
+
+      document.body.classList.remove(
+        'modal-open'
+      );
 
     }
 
@@ -4099,13 +4480,6 @@
 
       try {
 
-        /*
-         * IMPORTANTE:
-         *
-         * text/plain evita que el navegador
-         * haga un preflight CORS complejo.
-         */
-
         const respuesta =
           await fetch(
             API_URL,
@@ -4130,6 +4504,15 @@
           );
 
 
+        if (!respuesta.ok) {
+
+          throw new Error(
+            'El servidor no respondió correctamente.'
+          );
+
+        }
+
+
         const resultado =
           await respuesta.json();
 
@@ -4150,7 +4533,7 @@
 
 
         /*
-         * Abrimos WhatsApp con el pedido.
+         * Abrir WhatsApp.
          */
 
         if (
@@ -4179,6 +4562,35 @@
         cerrarCheckout();
 
         cerrarCarrito();
+
+
+        /*
+         * Limpiar formulario.
+         */
+
+        document.getElementById(
+          'customerName'
+        ).value = '';
+
+
+        document.getElementById(
+          'customerWhatsapp'
+        ).value = '';
+
+
+        document.getElementById(
+          'customerEmail'
+        ).value = '';
+
+
+        document.getElementById(
+          'customerAddress'
+        ).value = '';
+
+
+        document.getElementById(
+          'customerNotes'
+        ).value = '';
 
 
         alert(
@@ -4237,8 +4649,58 @@
       return Number(
         numero || 0
       ).toLocaleString(
-        'es-AR'
+        'es-AR',
+        {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2
+        }
       );
+
+    }
+
+
+    /* =====================================================
+       TOAST
+       ===================================================== */
+
+    let toastTimer;
+
+
+    function mostrarToast(
+      mensaje
+    ) {
+
+      const toast =
+        document.getElementById(
+          'toast'
+        );
+
+
+      toast.textContent =
+        mensaje;
+
+
+      toast.classList.add(
+        'show'
+      );
+
+
+      clearTimeout(
+        toastTimer
+      );
+
+
+      toastTimer =
+        setTimeout(
+          function() {
+
+            toast.classList.remove(
+              'show'
+            );
+
+          },
+          1800
+        );
 
     }
 
@@ -4252,7 +4714,7 @@
     ) {
 
       return String(
-        texto || ''
+        texto ?? ''
       )
 
       .replace(
@@ -4288,7 +4750,7 @@
     ) {
 
       return String(
-        texto || ''
+        texto ?? ''
       )
 
       .replace(
@@ -4302,6 +4764,29 @@
       );
 
     }
+
+
+    /* =====================================================
+       CERRAR CON ESC
+       ===================================================== */
+
+    document.addEventListener(
+      'keydown',
+      function(event) {
+
+        if (
+          event.key ===
+          'Escape'
+        ) {
+
+          cerrarCarrito();
+
+          cerrarCheckout();
+
+        }
+
+      }
+    );
 
 
   </script>
