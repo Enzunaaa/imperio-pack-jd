@@ -1,0 +1,816 @@
+/******************************************************
+ * IMPERIO PACK JD
+ * TIENDA ONLINE - GOOGLE APPS SCRIPT
+ *
+ * Flujo:
+ * Google Sheets
+ *      ↓
+ * Tienda online
+ *      ↓
+ * Carrito
+ *      ↓
+ * Pedido
+ *      ↓
+ * Google Sheets
+ *      ↓
+ * WhatsApp
+ ******************************************************/
+
+const CONFIG = {
+  SHEET_PRODUCTOS: 'PRODUCTOS',
+  SHEET_PEDIDOS: 'PEDIDOS',
+  SHEET_DETALLE: 'DETALLE_PEDIDOS',
+  SHEET_CLIENTES: 'CLIENTES',
+  SHEET_CONFIG: 'CONFIGURACION'
+};
+
+
+/**
+ * =====================================================
+ * CARGA PRINCIPAL DE LA TIENDA
+ * =====================================================
+ */
+function doGet() {
+
+  return HtmlService
+    .createTemplateFromFile('Index')
+    .evaluate()
+    .setTitle('IMPERIO PACK JD')
+    .setXFrameOptionsMode(
+      HtmlService.XFrameOptionsMode.ALLOWALL
+    );
+
+}
+
+
+/**
+ * =====================================================
+ * INCLUIR ARCHIVOS HTML
+ * =====================================================
+ */
+function include(filename) {
+
+  return HtmlService
+    .createHtmlOutputFromFile(filename)
+    .getContent();
+
+}
+
+
+/**
+ * =====================================================
+ * OBTENER PRODUCTOS ACTIVOS
+ * =====================================================
+ */
+function obtenerProductos() {
+
+  const ss =
+    SpreadsheetApp.getActiveSpreadsheet();
+
+  const sheet =
+    ss.getSheetByName(CONFIG.SHEET_PRODUCTOS);
+
+  if (!sheet) {
+
+    throw new Error(
+      'No existe la hoja PRODUCTOS.'
+    );
+
+  }
+
+
+  const data =
+    sheet.getDataRange().getValues();
+
+
+  if (data.length <= 1) {
+    return [];
+  }
+
+
+  const headers =
+    data.shift();
+
+
+  return data
+
+    .map(function(row) {
+
+      const producto = {};
+
+      headers.forEach(function(header, index) {
+
+        producto[header] =
+          row[index];
+
+      });
+
+      return producto;
+
+    })
+
+    .filter(function(producto) {
+
+      return String(
+        producto.ACTIVO || ''
+      ).trim().toUpperCase() === 'SI';
+
+    })
+
+    .map(function(producto) {
+
+      return {
+
+        ID:
+          String(producto.ID || ''),
+
+        PRODUCTO:
+          String(producto.PRODUCTO || ''),
+
+        CATEGORIA:
+          String(producto.CATEGORIA || 'Otros'),
+
+        PRECIO:
+          Number(producto.PRECIO || 0),
+
+        STOCK:
+          Number(producto.STOCK || 0),
+
+        IMAGEN:
+          String(producto.IMAGEN || ''),
+
+        DESCRIPCION:
+          String(producto.DESCRIPCION || ''),
+
+        ACTIVO:
+          'SI'
+
+      };
+
+    });
+
+}
+
+
+/**
+ * =====================================================
+ * OBTENER CONFIGURACIÓN
+ * =====================================================
+ */
+function obtenerConfiguracion() {
+
+  const ss =
+    SpreadsheetApp.getActiveSpreadsheet();
+
+  const sheet =
+    ss.getSheetByName(CONFIG.SHEET_CONFIG);
+
+  if (!sheet) {
+
+    throw new Error(
+      'No existe la hoja CONFIGURACION.'
+    );
+
+  }
+
+
+  const data =
+    sheet.getDataRange().getValues();
+
+
+  const configuracion = {};
+
+
+  for (
+    let i = 1;
+    i < data.length;
+    i++
+  ) {
+
+    const parametro =
+      String(data[i][0] || '').trim();
+
+    const valor =
+      data[i][1];
+
+
+    if (parametro) {
+
+      configuracion[parametro] =
+        valor;
+
+    }
+
+  }
+
+
+  return configuracion;
+
+}
+
+
+/**
+ * =====================================================
+ * GENERAR NÚMERO DE PEDIDO
+ *
+ * LockService evita que dos pedidos
+ * simultáneos reciban el mismo número.
+ * =====================================================
+ */
+function generarNumeroPedido() {
+
+  const lock =
+    LockService.getScriptLock();
+
+  lock.waitLock(30000);
+
+
+  try {
+
+    const ss =
+      SpreadsheetApp.getActiveSpreadsheet();
+
+    const sheet =
+      ss.getSheetByName(
+        CONFIG.SHEET_PEDIDOS
+      );
+
+
+    if (!sheet) {
+
+      throw new Error(
+        'No existe la hoja PEDIDOS.'
+      );
+
+    }
+
+
+    const ultimaFila =
+      sheet.getLastRow();
+
+
+    let numero = 1;
+
+
+    if (ultimaFila > 1) {
+
+      const ultimoPedido =
+        sheet
+          .getRange(
+            ultimaFila,
+            1
+          )
+          .getValue();
+
+
+      const numeroExtraido =
+        parseInt(
+          String(ultimoPedido)
+            .replace(/\D/g, ''),
+          10
+        );
+
+
+      if (
+        !isNaN(numeroExtraido)
+      ) {
+
+        numero =
+          numeroExtraido + 1;
+
+      }
+
+    }
+
+
+    return (
+      'PED-' +
+      String(numero)
+        .padStart(6, '0')
+    );
+
+  }
+
+  finally {
+
+    lock.releaseLock();
+
+  }
+
+}
+
+
+/**
+ * =====================================================
+ * REGISTRAR PEDIDO
+ * =====================================================
+ */
+function registrarPedido(pedido) {
+
+  if (!pedido) {
+
+    throw new Error(
+      'No se recibió información del pedido.'
+    );
+
+  }
+
+
+  if (
+    !pedido.productos ||
+    !pedido.productos.length
+  ) {
+
+    throw new Error(
+      'El carrito está vacío.'
+    );
+
+  }
+
+
+  if (!pedido.cliente) {
+
+    throw new Error(
+      'No se recibieron los datos del cliente.'
+    );
+
+  }
+
+
+  const ss =
+    SpreadsheetApp.getActiveSpreadsheet();
+
+
+  const sheetPedidos =
+    ss.getSheetByName(
+      CONFIG.SHEET_PEDIDOS
+    );
+
+
+  const sheetDetalle =
+    ss.getSheetByName(
+      CONFIG.SHEET_DETALLE
+    );
+
+
+  const sheetClientes =
+    ss.getSheetByName(
+      CONFIG.SHEET_CLIENTES
+    );
+
+
+  if (!sheetPedidos) {
+
+    throw new Error(
+      'No existe la hoja PEDIDOS.'
+    );
+
+  }
+
+
+  if (!sheetDetalle) {
+
+    throw new Error(
+      'No existe la hoja DETALLE_PEDIDOS.'
+    );
+
+  }
+
+
+  /*
+   * --------------------------------------------------
+   * VALIDAR PRODUCTOS Y STOCK
+   * --------------------------------------------------
+   */
+
+  const productosDisponibles =
+    obtenerProductos();
+
+
+  const mapaProductos = {};
+
+
+  productosDisponibles.forEach(
+    function(producto) {
+
+      mapaProductos[
+        String(producto.ID)
+      ] = producto;
+
+    }
+  );
+
+
+  let totalCalculado = 0;
+
+
+  const productosValidados =
+    pedido.productos.map(
+      function(item) {
+
+        const id =
+          String(item.id);
+
+
+        const producto =
+          mapaProductos[id];
+
+
+        if (!producto) {
+
+          throw new Error(
+            'El producto ' +
+            id +
+            ' ya no está disponible.'
+          );
+
+        }
+
+
+        const cantidad =
+          parseInt(
+            item.cantidad,
+            10
+          );
+
+
+        if (
+          isNaN(cantidad) ||
+          cantidad <= 0
+        ) {
+
+          throw new Error(
+            'Cantidad inválida para ' +
+            producto.PRODUCTO
+          );
+
+        }
+
+
+        if (
+          cantidad >
+          producto.STOCK
+        ) {
+
+          throw new Error(
+            'No hay suficiente stock de ' +
+            producto.PRODUCTO +
+            '. Stock disponible: ' +
+            producto.STOCK
+          );
+
+        }
+
+
+        const precio =
+          Number(
+            producto.PRECIO
+          );
+
+
+        const subtotal =
+          cantidad * precio;
+
+
+        totalCalculado +=
+          subtotal;
+
+
+        return {
+
+          id:
+            producto.ID,
+
+          nombre:
+            producto.PRODUCTO,
+
+          cantidad:
+            cantidad,
+
+          precio:
+            precio,
+
+          subtotal:
+            subtotal
+
+        };
+
+      }
+    );
+
+
+  /*
+   * --------------------------------------------------
+   * GENERAR PEDIDO
+   * --------------------------------------------------
+   */
+
+  const numeroPedido =
+    generarNumeroPedido();
+
+
+  const fecha =
+    new Date();
+
+
+  const cliente =
+    pedido.cliente;
+
+
+  /*
+   * --------------------------------------------------
+   * GUARDAR PEDIDO PRINCIPAL
+   * --------------------------------------------------
+   */
+
+  sheetPedidos.appendRow([
+
+    numeroPedido,
+
+    fecha,
+
+    cliente.nombre || '',
+
+    cliente.whatsapp || '',
+
+    cliente.email || '',
+
+    cliente.direccion || '',
+
+    totalCalculado,
+
+    'PENDIENTE',
+
+    cliente.observaciones || ''
+
+  ]);
+
+
+  /*
+   * --------------------------------------------------
+   * GUARDAR DETALLE
+   * --------------------------------------------------
+   */
+
+  productosValidados.forEach(
+    function(producto) {
+
+      sheetDetalle.appendRow([
+
+        numeroPedido,
+
+        producto.id,
+
+        producto.nombre,
+
+        producto.cantidad,
+
+        producto.precio,
+
+        producto.subtotal
+
+      ]);
+
+    }
+  );
+
+
+  /*
+   * --------------------------------------------------
+   * GUARDAR CLIENTE
+   * --------------------------------------------------
+   */
+
+  if (sheetClientes) {
+
+    sheetClientes.appendRow([
+
+      '',
+
+      cliente.nombre || '',
+
+      cliente.whatsapp || '',
+
+      cliente.email || '',
+
+      cliente.direccion || ''
+
+    ]);
+
+  }
+
+
+  /*
+   * --------------------------------------------------
+   * GENERAR WHATSAPP
+   * --------------------------------------------------
+   */
+
+  const configuracion =
+    obtenerConfiguracion();
+
+
+  const whatsapp =
+    String(
+      configuracion.WHATSAPP ||
+      '5493585123173'
+    )
+      .replace(/\D/g, '');
+
+
+  const pedidoParaWhatsApp = {
+
+    cliente:
+      cliente,
+
+    productos:
+      productosValidados,
+
+    total:
+      totalCalculado
+
+  };
+
+
+  const mensaje =
+    generarMensajeWhatsApp(
+      numeroPedido,
+      pedidoParaWhatsApp
+    );
+
+
+  const urlWhatsApp =
+    'https://wa.me/' +
+    whatsapp +
+    '?text=' +
+    encodeURIComponent(
+      mensaje
+    );
+
+
+  /*
+   * --------------------------------------------------
+   * RESULTADO
+   * --------------------------------------------------
+   */
+
+  return {
+
+    correcto: true,
+
+    numeroPedido:
+      numeroPedido,
+
+    total:
+      totalCalculado,
+
+    whatsapp:
+      urlWhatsApp
+
+  };
+
+}
+
+
+/**
+ * =====================================================
+ * GENERAR MENSAJE WHATSAPP
+ * =====================================================
+ */
+function generarMensajeWhatsApp(
+  numeroPedido,
+  pedido
+) {
+
+  const cliente =
+    pedido.cliente || {};
+
+
+  const productos =
+    pedido.productos || [];
+
+
+  let mensaje = '';
+
+
+  mensaje +=
+    'Hola IMPERIO PACK JD 👋\n\n';
+
+
+  mensaje +=
+    'Quiero realizar el siguiente pedido:\n\n';
+
+
+  mensaje +=
+    '🧾 Pedido: ' +
+    numeroPedido +
+    '\n\n';
+
+
+  productos.forEach(
+    function(producto) {
+
+      mensaje +=
+        '• ' +
+        producto.cantidad +
+        ' x ' +
+        producto.nombre +
+        ' — $' +
+        formatearPrecio(
+          producto.subtotal
+        ) +
+        '\n';
+
+    }
+  );
+
+
+  mensaje += '\n';
+
+
+  mensaje +=
+    '💰 TOTAL: $' +
+    formatearPrecio(
+      pedido.total
+    ) +
+    '\n\n';
+
+
+  mensaje +=
+    '👤 Datos del cliente:\n';
+
+
+  mensaje +=
+    'Nombre: ' +
+    (cliente.nombre || '') +
+    '\n';
+
+
+  mensaje +=
+    'WhatsApp: ' +
+    (cliente.whatsapp || '') +
+    '\n';
+
+
+  if (cliente.email) {
+
+    mensaje +=
+      'Email: ' +
+      cliente.email +
+      '\n';
+
+  }
+
+
+  if (cliente.direccion) {
+
+    mensaje +=
+      'Dirección: ' +
+      cliente.direccion +
+      '\n';
+
+  }
+
+
+  if (cliente.observaciones) {
+
+    mensaje +=
+      'Observaciones: ' +
+      cliente.observaciones +
+      '\n';
+
+  }
+
+
+  mensaje += '\n';
+
+
+  mensaje +=
+    'Quedo a la espera para confirmar disponibilidad y coordinar el pago.';
+
+
+  return mensaje;
+
+}
+
+
+/**
+ * =====================================================
+ * FORMATEAR PRECIO
+ * =====================================================
+ */
+function formatearPrecio(numero) {
+
+  numero =
+    Number(numero || 0);
+
+
+  return numero.toLocaleString(
+    'es-AR',
+    {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2
+    }
+  );
+
+}
