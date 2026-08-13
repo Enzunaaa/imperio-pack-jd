@@ -37,14 +37,20 @@
 
 
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
 
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
 
@@ -61,8 +67,7 @@
       color:
         var(--blanco);
 
-      min-height:
-        100vh;
+      min-height: 100vh;
 
     }
 
@@ -70,12 +75,16 @@
     button,
     input,
     textarea {
+
       font-family: inherit;
+
     }
 
 
     button {
+
       cursor: pointer;
+
     }
 
 
@@ -85,14 +94,11 @@
 
     header {
 
-      position:
-        sticky;
+      position: sticky;
 
-      top:
-        0;
+      top: 0;
 
-      z-index:
-        1000;
+      z-index: 1000;
 
       background:
         rgba(14,4,29,.96);
@@ -215,86 +221,9 @@
     }
 
 
-    .header-actions {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        flex-end;
-
-      gap:
-        9px;
-
-      min-width:
-        220px;
-
-    }
-
-
-    .whatsapp-header {
-
-      border:
-        1px solid
-        rgba(37,211,102,.35);
-
-      background:
-        linear-gradient(
-          135deg,
-          #159447,
-          #25D366
-        );
-
-      color:
-        white;
-
-      font-weight:
-        900;
-
-      padding:
-        11px 15px;
-
-      border-radius:
-        12px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      gap:
-        7px;
-
-      transition:
-        .25s;
-
-      white-space:
-        nowrap;
-
-      text-decoration:
-        none;
-
-    }
-
-
-    .whatsapp-header:hover {
-
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        0 8px 25px
-        rgba(37,211,102,.25);
-
-    }
-
+    /* =====================================================
+       CARRITO HEADER
+       ===================================================== */
 
     .cart-button {
 
@@ -316,7 +245,7 @@
         800;
 
       padding:
-        11px 15px;
+        11px 17px;
 
       border-radius:
         12px;
@@ -331,13 +260,16 @@
         center;
 
       gap:
-        8px;
+        9px;
 
       transition:
         .25s;
 
       white-space:
         nowrap;
+
+      min-width:
+        120px;
 
     }
 
@@ -546,8 +478,10 @@
 
 
     .hero-content {
+
       text-align:
         left;
+
     }
 
 
@@ -794,8 +728,10 @@
 
 
     .search::placeholder {
+
       color:
         #8E829D;
+
     }
 
 
@@ -2185,14 +2121,6 @@
       }
 
 
-      .header-actions {
-
-        min-width:
-          auto;
-
-      }
-
-
       .hero-inner {
 
         grid-template-columns:
@@ -2248,7 +2176,7 @@
       .header-inner {
 
         gap:
-          7px;
+          8px;
 
       }
 
@@ -2256,7 +2184,7 @@
       .header-logo img {
 
         width:
-          105px;
+          125px;
 
       }
 
@@ -2264,56 +2192,26 @@
       .header-title {
 
         font-size:
-          13px;
-
-        letter-spacing:
-          0;
-
-      }
-
-
-      .header-actions {
-
-        gap:
-          5px;
-
-      }
-
-
-      .whatsapp-header {
-
-        padding:
-          8px;
-
-        font-size:
-          0;
-
-      }
-
-
-      .whatsapp-header:first-letter {
-
-        font-size:
-          17px;
+          15px;
 
       }
 
 
       .cart-button {
 
+        min-width:
+          auto;
+
         padding:
-          7px 8px;
+          8px 10px;
 
         font-size:
           11px;
 
-        gap:
-          4px;
-
       }
 
 
-      #cartCount {
+      .cart-button #cartCount {
 
         min-width:
           21px;
@@ -2506,52 +2404,30 @@
       </div>
 
 
-      <!-- ACCIONES DEL HEADER -->
+      <!-- CARRITO EN EL HEADER -->
 
-      <div class="header-actions">
+      <button
+        type="button"
+        class="cart-button"
+        onclick="abrirCarrito()"
+        aria-label="Abrir carrito"
+      >
 
+        🛒
 
-        <!-- WHATSAPP -->
+        <span>
 
-        <a
-          class="whatsapp-header"
-          href="https://wa.link/er02b5"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contactar por WhatsApp"
-        >
+          Carrito
 
-          💬
+        </span>
 
-          <span>
-            WhatsApp
-          </span>
+        <span id="cartCount">
 
-        </a>
+          0
 
+        </span>
 
-        <!-- CARRITO -->
-
-        <button
-          class="cart-button"
-          onclick="abrirCarrito()"
-          aria-label="Abrir carrito"
-        >
-
-          🛒
-
-          <span>
-            Carrito
-          </span>
-
-          <span id="cartCount">
-            0
-          </span>
-
-        </button>
-
-
-      </div>
+      </button>
 
 
     </div>
@@ -2652,6 +2528,7 @@
       >
 
         <button
+          type="button"
           class="category active"
           onclick="seleccionarCategoria('TODOS', this)"
         >
@@ -2782,8 +2659,10 @@
 
 
         <button
+          type="button"
           class="close-cart"
           onclick="cerrarCarrito()"
+          aria-label="Cerrar carrito"
         >
 
           ×
@@ -2816,6 +2695,7 @@
 
 
         <button
+          type="button"
           class="checkout-button"
           onclick="abrirCheckout()"
         >
@@ -2854,8 +2734,10 @@
 
 
         <button
+          type="button"
           class="close-modal"
           onclick="cerrarCheckout()"
+          aria-label="Cerrar"
         >
 
           ×
@@ -2959,6 +2841,7 @@
 
 
       <button
+        type="button"
         id="sendOrderButton"
         class="send-order"
         onclick="confirmarPedido()"
@@ -3067,6 +2950,10 @@
 
   <script>
 
+
+    /* =====================================================
+       URL DE GOOGLE APPS SCRIPT
+       ===================================================== */
 
     const API_URL =
       'https://script.google.com/macros/s/AKfycbzSzsU4PNstDMWekZYoTXQhHrIcPVAZDj4Ca9ERCxck-PWGTZhECRTaojT-TcpKxYVr/exec';
@@ -3214,6 +3101,7 @@
       contenedor.innerHTML = `
 
         <button
+          type="button"
           class="category active"
           onclick="seleccionarCategoria('TODOS', this)"
         >
@@ -3246,6 +3134,10 @@
             document.createElement(
               'button'
             );
+
+
+          button.type =
+            'button';
 
 
           button.className =
@@ -3316,7 +3208,7 @@
 
 
     /* =====================================================
-       BUSCAR
+       BUSCADOR
        ===================================================== */
 
     function filtrarProductos() {
@@ -3451,8 +3343,7 @@
               src="${escapeHtml(producto.IMAGEN)}"
               alt="${escapeHtml(producto.PRODUCTO)}"
               loading="lazy"
-              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'placeholder\\'>📦</div>';"
-
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>📦</div>';"
             >
 
           `
@@ -3548,6 +3439,7 @@
                 : `
 
                   <button
+                    type="button"
                     class="add-button"
                     onclick="agregarAlCarrito('${escapeJs(producto.ID)}')"
                   >
@@ -3590,7 +3482,26 @@
 
 
       if (!producto) {
+
         return;
+
+      }
+
+
+      const stock =
+        Number(
+          producto.STOCK || 0
+        );
+
+
+      if (stock <= 0) {
+
+        alert(
+          'Este producto no tiene stock disponible.'
+        );
+
+        return;
+
       }
 
 
@@ -3606,7 +3517,7 @@
 
         if (
           existente.cantidad <
-          Number(producto.STOCK)
+          stock
         ) {
 
           existente.cantidad++;
@@ -3642,9 +3553,7 @@
             1,
 
           stock:
-            Number(
-              producto.STOCK
-            )
+            stock
 
         });
 
@@ -3652,6 +3561,98 @@
 
 
       actualizarCarrito();
+
+
+      /*
+       * Pequeña confirmación visual.
+       */
+
+      mostrarNotificacion(
+        'Producto agregado al carrito ✓'
+      );
+
+    }
+
+
+    /* =====================================================
+       NOTIFICACIÓN
+       ===================================================== */
+
+    function mostrarNotificacion(
+      mensaje
+    ) {
+
+      const anterior =
+        document.getElementById(
+          'cartNotification'
+        );
+
+
+      if (anterior) {
+
+        anterior.remove();
+
+      }
+
+
+      const notificacion =
+        document.createElement(
+          'div'
+        );
+
+
+      notificacion.id =
+        'cartNotification';
+
+
+      notificacion.textContent =
+        mensaje;
+
+
+      notificacion.style.position =
+        'fixed';
+
+      notificacion.style.top =
+        '95px';
+
+      notificacion.style.right =
+        '20px';
+
+      notificacion.style.zIndex =
+        '5000';
+
+      notificacion.style.padding =
+        '12px 18px';
+
+      notificacion.style.borderRadius =
+        '10px';
+
+      notificacion.style.background =
+        'linear-gradient(135deg,#B92C82,#FF7043)';
+
+      notificacion.style.color =
+        '#fff';
+
+      notificacion.style.fontWeight =
+        '800';
+
+      notificacion.style.boxShadow =
+        '0 10px 30px rgba(0,0,0,.35)';
+
+
+      document.body.appendChild(
+        notificacion
+      );
+
+
+      setTimeout(
+        function() {
+
+          notificacion.remove();
+
+        },
+        1800
+      );
 
     }
 
@@ -3702,6 +3703,10 @@
             <br><br>
 
             Tu carrito está vacío.
+
+            <br><br>
+
+            Agregá productos para comenzar tu pedido.
 
           </div>
 
@@ -3779,6 +3784,7 @@
 
 
               <button
+                type="button"
                 class="remove"
                 onclick="eliminarDelCarrito(${index})"
               >
@@ -3793,6 +3799,7 @@
             <div class="quantity">
 
               <button
+                type="button"
                 onclick="cambiarCantidad(${index}, -1)"
               >
 
@@ -3809,6 +3816,7 @@
 
 
               <button
+                type="button"
                 onclick="cambiarCantidad(${index}, 1)"
               >
 
@@ -3841,7 +3849,7 @@
 
 
     /* =====================================================
-       CANTIDAD
+       CAMBIAR CANTIDAD
        ===================================================== */
 
     function cambiarCantidad(
@@ -3854,7 +3862,9 @@
 
 
       if (!item) {
+
         return;
+
       }
 
 
@@ -3902,7 +3912,7 @@
 
 
     /* =====================================================
-       ELIMINAR
+       ELIMINAR DEL CARRITO
        ===================================================== */
 
     function eliminarDelCarrito(
@@ -3921,7 +3931,7 @@
 
 
     /* =====================================================
-       ABRIR / CERRAR CARRITO
+       ABRIR CARRITO
        ===================================================== */
 
     function abrirCarrito() {
@@ -3934,8 +3944,16 @@
           'open'
         );
 
+
+      document.body.style.overflow =
+        'hidden';
+
     }
 
+
+    /* =====================================================
+       CERRAR CARRITO
+       ===================================================== */
 
     function cerrarCarrito() {
 
@@ -3946,6 +3964,10 @@
         .classList.remove(
           'open'
         );
+
+
+      document.body.style.overflow =
+        '';
 
     }
 
@@ -4056,6 +4078,9 @@
         );
 
 
+      cerrarCarrito();
+
+
       document
         .getElementById(
           'checkoutModal'
@@ -4066,6 +4091,10 @@
 
     }
 
+
+    /* =====================================================
+       CERRAR CHECKOUT
+       ===================================================== */
 
     function cerrarCheckout() {
 
@@ -4292,6 +4321,10 @@
         }
 
 
+        /*
+         * Abrir WhatsApp
+         */
+
         if (
           resultado.whatsapp
         ) {
@@ -4304,15 +4337,18 @@
         }
 
 
+        /*
+         * Vaciar carrito
+         */
+
         carrito =
           [];
 
 
         actualizarCarrito();
 
-        cerrarCheckout();
 
-        cerrarCarrito();
+        cerrarCheckout();
 
 
         alert(
@@ -4324,7 +4360,6 @@
           'Ahora se abrirá WhatsApp para enviarlo.'
 
         );
-
 
       }
 
@@ -4417,6 +4452,10 @@
     }
 
 
+    /* =====================================================
+       SEGURIDAD JAVASCRIPT
+       ===================================================== */
+
     function escapeJs(
       texto
     ) {
@@ -4436,6 +4475,29 @@
       );
 
     }
+
+
+    /* =====================================================
+       CERRAR MODAL CON ESC
+       ===================================================== */
+
+    document.addEventListener(
+      'keydown',
+      function(event) {
+
+        if (
+          event.key ===
+          'Escape'
+        ) {
+
+          cerrarCarrito();
+
+          cerrarCheckout();
+
+        }
+
+      }
+    );
 
 
   </script>
