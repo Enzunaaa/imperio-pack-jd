@@ -10,26 +10,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>IMPERIO PACK JD | Todo para tu negocio</title>
+  <title>IMPERIO PACK JD</title>
 
   <meta
     name="description"
-    content="Imperio Pack JD - Todo lo que necesitás para tu negocio en un solo lugar."
-  >
-
-  <meta
-    name="theme-color"
-    content="#0E041D"
-  >
-
-  <meta
-    name="robots"
-    content="index, follow"
-  >
-
-  <link
-    rel="icon"
-    href="https://i.ibb.co/ZzNpTFd4/logo-imperio-completo.png"
+    content="Imperio Pack JD - Todo para tu negocio."
   >
 
   <style>
@@ -37,43 +22,29 @@
     :root {
 
       --fondo: #0E041D;
-      --fondo-secundario: #130622;
       --violeta-profundo: #1A0C2F;
       --violeta: #3A145C;
       --purpura: #5A197D;
       --magenta: #B92C82;
-
       --naranja: #FF9F3D;
       --naranja-fuerte: #FF7043;
-      --naranja-claro: #FFC16D;
 
       --blanco: #FFFFFF;
       --blanco-secundario: #D9D4E2;
       --gris: #9C94A8;
 
-      --verde: #25D366;
-      --rojo: #FF6B6B;
-
-      --radio: 18px;
-
     }
 
 
     * {
-
       box-sizing: border-box;
-
       margin: 0;
-
       padding: 0;
-
     }
 
 
     html {
-
       scroll-behavior: smooth;
-
     }
 
 
@@ -93,35 +64,18 @@
       min-height:
         100vh;
 
-      overflow-x:
-        hidden;
-
-    }
-
-
-    body.modal-open {
-
-      overflow:
-        hidden;
-
     }
 
 
     button,
     input,
     textarea {
-
-      font-family:
-        inherit;
-
+      font-family: inherit;
     }
 
 
     button {
-
-      cursor:
-        pointer;
-
+      cursor: pointer;
     }
 
 
@@ -144,7 +98,7 @@
         rgba(14,4,29,.96);
 
       backdrop-filter:
-        blur(16px);
+        blur(15px);
 
       border-bottom:
         1px solid
@@ -158,9 +112,6 @@
 
 
     .header-inner {
-
-      width:
-        100%;
 
       max-width:
         1250px;
@@ -264,6 +215,87 @@
     }
 
 
+    .header-actions {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        flex-end;
+
+      gap:
+        9px;
+
+      min-width:
+        220px;
+
+    }
+
+
+    .whatsapp-header {
+
+      border:
+        1px solid
+        rgba(37,211,102,.35);
+
+      background:
+        linear-gradient(
+          135deg,
+          #159447,
+          #25D366
+        );
+
+      color:
+        white;
+
+      font-weight:
+        900;
+
+      padding:
+        11px 15px;
+
+      border-radius:
+        12px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        7px;
+
+      transition:
+        .25s;
+
+      white-space:
+        nowrap;
+
+      text-decoration:
+        none;
+
+    }
+
+
+    .whatsapp-header:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 8px 25px
+        rgba(37,211,102,.25);
+
+    }
+
+
     .cart-button {
 
       border:
@@ -284,7 +316,7 @@
         800;
 
       padding:
-        11px 17px;
+        11px 15px;
 
       border-radius:
         12px;
@@ -295,8 +327,11 @@
       align-items:
         center;
 
+      justify-content:
+        center;
+
       gap:
-        9px;
+        8px;
 
       transition:
         .25s;
@@ -370,7 +405,7 @@
         hidden;
 
       min-height:
-        500px;
+        460px;
 
       display:
         flex;
@@ -412,10 +447,10 @@
         absolute;
 
       width:
-        550px;
+        500px;
 
       height:
-        550px;
+        500px;
 
       border-radius:
         50%;
@@ -428,10 +463,10 @@
         );
 
       top:
-        -280px;
+        -250px;
 
       right:
-        -170px;
+        -150px;
 
       pointer-events:
         none;
@@ -448,10 +483,10 @@
         absolute;
 
       width:
-        500px;
+        450px;
 
       height:
-        500px;
+        450px;
 
       border-radius:
         50%;
@@ -464,10 +499,10 @@
         );
 
       bottom:
-        -280px;
+        -250px;
 
       left:
-        -150px;
+        -120px;
 
       pointer-events:
         none;
@@ -493,7 +528,7 @@
         auto;
 
       padding:
-        70px 25px;
+        55px 25px;
 
       display:
         grid;
@@ -505,186 +540,14 @@
         center;
 
       gap:
-        50px;
+        40px;
 
     }
 
 
     .hero-content {
-
       text-align:
         left;
-
-    }
-
-
-    .hero-badge {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      gap:
-        8px;
-
-      margin-bottom:
-        20px;
-
-      padding:
-        8px 14px;
-
-      border:
-        1px solid
-        rgba(255,159,61,.25);
-
-      border-radius:
-        30px;
-
-      background:
-        rgba(255,255,255,.05);
-
-      color:
-        var(--naranja);
-
-      font-size:
-        12px;
-
-      font-weight:
-        900;
-
-      text-transform:
-        uppercase;
-
-      letter-spacing:
-        1px;
-
-    }
-
-
-    .hero h1 {
-
-      font-size:
-        clamp(
-          34px,
-          5vw,
-          58px
-        );
-
-      line-height:
-        1.04;
-
-      font-weight:
-        950;
-
-      margin-bottom:
-        20px;
-
-    }
-
-
-    .hero h1 span {
-
-      display:
-        block;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--magenta),
-          var(--naranja)
-        );
-
-      -webkit-background-clip:
-        text;
-
-      background-clip:
-        text;
-
-      color:
-        transparent;
-
-    }
-
-
-    .hero p {
-
-      color:
-        var(--blanco-secundario);
-
-      max-width:
-        600px;
-
-      font-size:
-        17px;
-
-      line-height:
-        1.65;
-
-      margin-bottom:
-        28px;
-
-    }
-
-
-    .hero-actions {
-
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        12px;
-
-    }
-
-
-    .hero-button {
-
-      border:
-        0;
-
-      padding:
-        13px 20px;
-
-      border-radius:
-        11px;
-
-      font-weight:
-        900;
-
-      color:
-        white;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--magenta),
-          var(--naranja-fuerte)
-        );
-
-      box-shadow:
-        0 10px 30px
-        rgba(255,112,67,.18);
-
-      transition:
-        .25s;
-
-    }
-
-
-    .hero-button:hover {
-
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        0 15px 35px
-        rgba(255,112,67,.28);
-
     }
 
 
@@ -699,6 +562,9 @@
       justify-content:
         center;
 
+      order:
+        2;
+
     }
 
 
@@ -711,7 +577,7 @@
         );
 
       max-height:
-        330px;
+        300px;
 
       object-fit:
         contain;
@@ -760,14 +626,73 @@
     }
 
 
+    .hero h1 {
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          55px
+        );
+
+      line-height:
+        1.05;
+
+      font-weight:
+        950;
+
+      margin-bottom:
+        18px;
+
+    }
+
+
+    .hero h1 span {
+
+      display:
+        block;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--magenta),
+          var(--naranja)
+        );
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+    }
+
+
+    .hero p {
+
+      color:
+        var(--blanco-secundario);
+
+      max-width:
+        620px;
+
+      font-size:
+        17px;
+
+      line-height:
+        1.65;
+
+    }
+
+
     /* =====================================================
        CONTENIDO
        ===================================================== */
 
     .container {
-
-      width:
-        100%;
 
       max-width:
         1250px;
@@ -776,7 +701,7 @@
         auto;
 
       padding:
-        55px 25px 75px;
+        45px 25px 70px;
 
     }
 
@@ -787,7 +712,7 @@
         center;
 
       margin-bottom:
-        30px;
+        28px;
 
     }
 
@@ -869,10 +794,8 @@
 
 
     .search::placeholder {
-
       color:
         #8E829D;
-
     }
 
 
@@ -1016,7 +939,7 @@
         rgba(255,255,255,.08);
 
       border-radius:
-        var(--radio);
+        18px;
 
       overflow:
         hidden;
@@ -1080,9 +1003,6 @@
 
       overflow:
         hidden;
-
-      position:
-        relative;
 
     }
 
@@ -1233,7 +1153,7 @@
         linear-gradient(
           90deg,
           var(--naranja),
-          var(--naranja-claro)
+          #FFC16D
         );
 
       -webkit-background-clip:
@@ -1293,7 +1213,7 @@
     .out-stock {
 
       color:
-        var(--rojo);
+        #FF7B7B;
 
       font-size:
         12px;
@@ -1328,10 +1248,10 @@
     .philosophy {
 
       margin-top:
-        60px;
+        55px;
 
       padding:
-        38px;
+        35px;
 
       border-radius:
         20px;
@@ -1356,7 +1276,7 @@
         center;
 
       margin-bottom:
-        30px;
+        28px;
 
       font-size:
         28px;
@@ -1684,7 +1604,7 @@
         none;
 
       color:
-        var(--rojo);
+        #FF7B7B;
 
       font-size:
         12px;
@@ -1764,14 +1684,6 @@
 
       font-weight:
         900;
-
-    }
-
-
-    .checkout-button:hover {
-
-      transform:
-        translateY(-1px);
 
     }
 
@@ -1970,19 +1882,6 @@
     }
 
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-
-      border-color:
-        var(--naranja);
-
-      box-shadow:
-        0 0 0 3px
-        rgba(255,159,61,.07);
-
-    }
-
-
     .form-group textarea {
 
       min-height:
@@ -2108,7 +2007,7 @@
         50%;
 
       background:
-        var(--verde);
+        #25D366;
 
       color:
         white;
@@ -2163,7 +2062,7 @@
         rgba(255,255,255,.06);
 
       padding:
-        40px 20px;
+        35px 20px;
 
       text-align:
         center;
@@ -2205,8 +2104,7 @@
     }
 
 
-    .footer-contact a,
-    .footer-address a {
+    .footer-contact a {
 
       color:
         var(--blanco-secundario);
@@ -2217,8 +2115,7 @@
     }
 
 
-    .footer-contact a:hover,
-    .footer-address a:hover {
+    .footer-contact a:hover {
 
       color:
         var(--naranja);
@@ -2234,91 +2131,21 @@
     }
 
 
-    .footer-copy {
-
-      margin-top:
-        20px;
-
-      padding-top:
-        18px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,.06);
-
-      font-size:
-        11px;
-
-    }
-
-
-    /* =====================================================
-       TOAST
-       ===================================================== */
-
-    .toast {
-
-      position:
-        fixed;
-
-      left:
-        50%;
-
-      bottom:
-        25px;
-
-      transform:
-        translate(-50%, 120px);
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--violeta),
-          var(--purpura)
-        );
-
-      border:
-        1px solid
-        rgba(255,159,61,.25);
+    .footer-address a {
 
       color:
-        white;
+        var(--blanco-secundario);
 
-      padding:
-        13px 20px;
-
-      border-radius:
-        12px;
-
-      font-size:
-        14px;
-
-      font-weight:
-        800;
-
-      z-index:
-        5000;
-
-      opacity:
-        0;
-
-      transition:
-        .3s;
-
-      box-shadow:
-        0 10px 35px
-        rgba(0,0,0,.35);
+      text-decoration:
+        none;
 
     }
 
 
-    .toast.show {
+    .footer-address a:hover {
 
-      opacity:
-        1;
-
-      transform:
-        translate(-50%, 0);
+      color:
+        var(--naranja);
 
     }
 
@@ -2358,6 +2185,14 @@
       }
 
 
+      .header-actions {
+
+        min-width:
+          auto;
+
+      }
+
+
       .hero-inner {
 
         grid-template-columns:
@@ -2374,16 +2209,16 @@
         text-align:
           center;
 
+        order:
+          1;
+
       }
 
 
-      .hero-badge {
+      .hero-logo-container {
 
-        margin-left:
-          auto;
-
-        margin-right:
-          auto;
+        order:
+          2;
 
       }
 
@@ -2391,15 +2226,7 @@
       .hero p {
 
         margin:
-          0 auto 28px;
-
-      }
-
-
-      .hero-actions {
-
-        justify-content:
-          center;
+          auto;
 
       }
 
@@ -2421,7 +2248,7 @@
       .header-inner {
 
         gap:
-          8px;
+          7px;
 
       }
 
@@ -2429,15 +2256,45 @@
       .header-logo img {
 
         width:
-          125px;
+          105px;
 
       }
 
 
       .header-title {
 
-        display:
-          none;
+        font-size:
+          13px;
+
+        letter-spacing:
+          0;
+
+      }
+
+
+      .header-actions {
+
+        gap:
+          5px;
+
+      }
+
+
+      .whatsapp-header {
+
+        padding:
+          8px;
+
+        font-size:
+          0;
+
+      }
+
+
+      .whatsapp-header:first-letter {
+
+        font-size:
+          17px;
 
       }
 
@@ -2445,7 +2302,24 @@
       .cart-button {
 
         padding:
-          8px 10px;
+          7px 8px;
+
+        font-size:
+          11px;
+
+        gap:
+          4px;
+
+      }
+
+
+      #cartCount {
+
+        min-width:
+          21px;
+
+        height:
+          21px;
 
         font-size:
           11px;
@@ -2456,7 +2330,7 @@
       .hero {
 
         min-height:
-          570px;
+          510px;
 
       }
 
@@ -2466,16 +2340,13 @@
         padding:
           45px 18px;
 
-        gap:
-          30px;
-
       }
 
 
       .hero h1 {
 
         font-size:
-          31px;
+          30px;
 
       }
 
@@ -2494,7 +2365,7 @@
           90%;
 
         max-height:
-          220px;
+          210px;
 
       }
 
@@ -2502,15 +2373,7 @@
       .container {
 
         padding:
-          38px 14px 60px;
-
-      }
-
-
-      .section-title h2 {
-
-        font-size:
-          27px;
+          35px 14px 60px;
 
       }
 
@@ -2607,25 +2470,6 @@
 
       }
 
-
-      .modal {
-
-        padding:
-          10px;
-
-      }
-
-
-      .modal-box {
-
-        padding:
-          20px;
-
-        border-radius:
-          16px;
-
-      }
-
     }
 
   </style>
@@ -2645,18 +2489,14 @@
     <div class="header-inner">
 
 
-      <a
-        href="#inicio"
-        class="header-logo"
-        aria-label="Imperio Pack JD - Inicio"
-      >
+      <div class="header-logo">
 
         <img
           src="https://i.ibb.co/ZzNpTFd4/logo-imperio-completo.png"
           alt="Imperio Pack JD"
         >
 
-      </a>
+      </div>
 
 
       <div class="header-title">
@@ -2666,19 +2506,52 @@
       </div>
 
 
-      <button
-        class="cart-button"
-        onclick="abrirCarrito()"
-        aria-label="Abrir carrito"
-      >
+      <!-- ACCIONES DEL HEADER -->
 
-        🛒 Carrito
+      <div class="header-actions">
 
-        <span id="cartCount">
-          0
-        </span>
 
-      </button>
+        <!-- WHATSAPP -->
+
+        <a
+          class="whatsapp-header"
+          href="https://wa.link/er02b5"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contactar por WhatsApp"
+        >
+
+          💬
+
+          <span>
+            WhatsApp
+          </span>
+
+        </a>
+
+
+        <!-- CARRITO -->
+
+        <button
+          class="cart-button"
+          onclick="abrirCarrito()"
+          aria-label="Abrir carrito"
+        >
+
+          🛒
+
+          <span>
+            Carrito
+          </span>
+
+          <span id="cartCount">
+            0
+          </span>
+
+        </button>
+
+
+      </div>
 
 
     </div>
@@ -2700,14 +2573,6 @@
 
       <div class="hero-content">
 
-
-        <div class="hero-badge">
-
-          ✦ Todo para tu negocio
-
-        </div>
-
-
         <h1>
 
           TODO LO QUE NECESITÁS,
@@ -2726,21 +2591,6 @@
           y recibilo de manera rápida y sencilla.
 
         </p>
-
-
-        <div class="hero-actions">
-
-          <button
-            class="hero-button"
-            onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})"
-          >
-
-            VER PRODUCTOS
-
-          </button>
-
-        </div>
-
 
       </div>
 
@@ -2793,7 +2643,6 @@
         type="text"
         placeholder="🔎 Buscar productos..."
         oninput="filtrarProductos()"
-        autocomplete="off"
       >
 
 
@@ -2824,7 +2673,7 @@
 
       <div class="loading">
 
-        ⏳ Cargando productos...
+        Cargando productos...
 
       </div>
 
@@ -2858,8 +2707,8 @@
 
             Nos posicionamos como un proveedor central y seguro.
             Nuestro compromiso es garantizar que siempre encuentres
-            los productos esenciales que tu negocio necesita,
-            cuando los necesita.
+            los productos esenciales que tu negocio u hogar necesitan,
+            cuando los necesitan.
 
           </p>
 
@@ -2935,7 +2784,6 @@
         <button
           class="close-cart"
           onclick="cerrarCarrito()"
-          aria-label="Cerrar carrito"
         >
 
           ×
@@ -3008,7 +2856,6 @@
         <button
           class="close-modal"
           onclick="cerrarCheckout()"
-          aria-label="Cerrar"
         >
 
           ×
@@ -3039,7 +2886,7 @@
 
       <div class="form-group">
 
-        <label for="customerName">
+        <label>
           Nombre y apellido *
         </label>
 
@@ -3047,7 +2894,6 @@
           id="customerName"
           type="text"
           placeholder="Ej: Juan Pérez"
-          autocomplete="name"
         >
 
       </div>
@@ -3055,7 +2901,7 @@
 
       <div class="form-group">
 
-        <label for="customerWhatsapp">
+        <label>
           WhatsApp *
         </label>
 
@@ -3063,7 +2909,6 @@
           id="customerWhatsapp"
           type="tel"
           placeholder="Ej: 3585123456"
-          autocomplete="tel"
         >
 
       </div>
@@ -3071,7 +2916,7 @@
 
       <div class="form-group">
 
-        <label for="customerEmail">
+        <label>
           Email
         </label>
 
@@ -3079,7 +2924,6 @@
           id="customerEmail"
           type="email"
           placeholder="tuemail@email.com"
-          autocomplete="email"
         >
 
       </div>
@@ -3087,7 +2931,7 @@
 
       <div class="form-group">
 
-        <label for="customerAddress">
+        <label>
           Dirección
         </label>
 
@@ -3095,7 +2939,6 @@
           id="customerAddress"
           type="text"
           placeholder="Dirección de entrega"
-          autocomplete="street-address"
         >
 
       </div>
@@ -3103,7 +2946,7 @@
 
       <div class="form-group">
 
-        <label for="customerNotes">
+        <label>
           Observaciones
         </label>
 
@@ -3212,28 +3055,10 @@
       </div>
 
 
-      <div class="footer-copy">
-
-        © <span id="currentYear"></span>
-        IMPERIO PACK JD. Todos los derechos reservados.
-
-      </div>
-
-
     </div>
 
 
   </footer>
-
-
-  <!-- =====================================================
-       TOAST
-       ===================================================== -->
-
-  <div
-    id="toast"
-    class="toast"
-  ></div>
 
 
   <!-- =====================================================
@@ -3243,17 +3068,9 @@
   <script>
 
 
-    /* =====================================================
-       URL DE TU API - GOOGLE APPS SCRIPT
-       ===================================================== */
-
     const API_URL =
       'https://script.google.com/macros/s/AKfycbzSzsU4PNstDMWekZYoTXQhHrIcPVAZDj4Ca9ERCxck-PWGTZhECRTaojT-TcpKxYVr/exec';
 
-
-    /* =====================================================
-       VARIABLES
-       ===================================================== */
 
     let productos = [];
 
@@ -3270,12 +3087,6 @@
     document.addEventListener(
       'DOMContentLoaded',
       function() {
-
-        document.getElementById(
-          'currentYear'
-        ).textContent =
-          new Date().getFullYear();
-
 
         cargarProductos();
 
@@ -3346,11 +3157,7 @@
 
 
         productos =
-          Array.isArray(
-            data.productos
-          )
-            ? data.productos
-            : [];
+          data.productos || [];
 
 
         crearCategorias();
@@ -3380,9 +3187,7 @@
             <br><br>
 
             <small>
-              ${escapeHtml(
-                error.message
-              )}
+              ${escapeHtml(error.message)}
             </small>
 
           </div>
@@ -3431,17 +3236,7 @@
               .filter(Boolean)
           )
         ]
-        .sort(
-          function(a,b) {
-
-            return String(a)
-              .localeCompare(
-                String(b),
-                'es'
-              );
-
-          }
-        );
+        .sort();
 
 
       categorias.forEach(
@@ -3521,7 +3316,7 @@
 
 
     /* =====================================================
-       BUSCADOR
+       BUSCAR
        ===================================================== */
 
     function filtrarProductos() {
@@ -3543,18 +3338,14 @@
         );
 
 
-      const searchInput =
-        document.getElementById(
-          'search'
-        );
-
-
       const busqueda =
-        searchInput
-          ? searchInput.value
-              .toLowerCase()
-              .trim()
-          : '';
+        document
+          .getElementById(
+            'search'
+          )
+          .value
+          .toLowerCase()
+          .trim();
 
 
       const filtrados =
@@ -3660,7 +3451,8 @@
               src="${escapeHtml(producto.IMAGEN)}"
               alt="${escapeHtml(producto.PRODUCTO)}"
               loading="lazy"
-              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>📦</div>';"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'placeholder\\'>📦</div>';"
+
             >
 
           `
@@ -3798,9 +3590,7 @@
 
 
       if (!producto) {
-
         return;
-
       }
 
 
@@ -3820,10 +3610,6 @@
         ) {
 
           existente.cantidad++;
-
-          mostrarToast(
-            'Producto agregado al carrito.'
-          );
 
         }
 
@@ -3861,11 +3647,6 @@
             )
 
         });
-
-
-        mostrarToast(
-          'Producto agregado al carrito.'
-        );
 
       }
 
@@ -4060,7 +3841,7 @@
 
 
     /* =====================================================
-       CAMBIAR CANTIDAD
+       CANTIDAD
        ===================================================== */
 
     function cambiarCantidad(
@@ -4073,9 +3854,7 @@
 
 
       if (!item) {
-
         return;
-
       }
 
 
@@ -4285,11 +4064,6 @@
           'open'
         );
 
-
-      document.body.classList.add(
-        'modal-open'
-      );
-
     }
 
 
@@ -4302,11 +4076,6 @@
         .classList.remove(
           'open'
         );
-
-
-      document.body.classList.remove(
-        'modal-open'
-      );
 
     }
 
@@ -4504,15 +4273,6 @@
           );
 
 
-        if (!respuesta.ok) {
-
-          throw new Error(
-            'El servidor no respondió correctamente.'
-          );
-
-        }
-
-
         const resultado =
           await respuesta.json();
 
@@ -4532,10 +4292,6 @@
         }
 
 
-        /*
-         * Abrir WhatsApp.
-         */
-
         if (
           resultado.whatsapp
         ) {
@@ -4548,49 +4304,15 @@
         }
 
 
-        /*
-         * Vaciar carrito.
-         */
-
         carrito =
           [];
 
 
         actualizarCarrito();
 
-
         cerrarCheckout();
 
         cerrarCarrito();
-
-
-        /*
-         * Limpiar formulario.
-         */
-
-        document.getElementById(
-          'customerName'
-        ).value = '';
-
-
-        document.getElementById(
-          'customerWhatsapp'
-        ).value = '';
-
-
-        document.getElementById(
-          'customerEmail'
-        ).value = '';
-
-
-        document.getElementById(
-          'customerAddress'
-        ).value = '';
-
-
-        document.getElementById(
-          'customerNotes'
-        ).value = '';
 
 
         alert(
@@ -4649,58 +4371,8 @@
       return Number(
         numero || 0
       ).toLocaleString(
-        'es-AR',
-        {
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 2
-        }
+        'es-AR'
       );
-
-    }
-
-
-    /* =====================================================
-       TOAST
-       ===================================================== */
-
-    let toastTimer;
-
-
-    function mostrarToast(
-      mensaje
-    ) {
-
-      const toast =
-        document.getElementById(
-          'toast'
-        );
-
-
-      toast.textContent =
-        mensaje;
-
-
-      toast.classList.add(
-        'show'
-      );
-
-
-      clearTimeout(
-        toastTimer
-      );
-
-
-      toastTimer =
-        setTimeout(
-          function() {
-
-            toast.classList.remove(
-              'show'
-            );
-
-          },
-          1800
-        );
 
     }
 
@@ -4714,7 +4386,7 @@
     ) {
 
       return String(
-        texto ?? ''
+        texto || ''
       )
 
       .replace(
@@ -4750,7 +4422,7 @@
     ) {
 
       return String(
-        texto ?? ''
+        texto || ''
       )
 
       .replace(
@@ -4764,29 +4436,6 @@
       );
 
     }
-
-
-    /* =====================================================
-       CERRAR CON ESC
-       ===================================================== */
-
-    document.addEventListener(
-      'keydown',
-      function(event) {
-
-        if (
-          event.key ===
-          'Escape'
-        ) {
-
-          cerrarCarrito();
-
-          cerrarCheckout();
-
-        }
-
-      }
-    );
 
 
   </script>
