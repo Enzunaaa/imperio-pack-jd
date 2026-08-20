@@ -19,6 +19,10 @@
 
 <style>
 
+/* =====================================================
+   VARIABLES
+===================================================== */
+
 :root{
 
   --fondo:#0E041D;
@@ -35,6 +39,11 @@
 
 }
 
+
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
 
   box-sizing:border-box;
@@ -43,11 +52,13 @@
 
 }
 
+
 html{
 
   scroll-behavior:smooth;
 
 }
+
 
 body{
 
@@ -65,6 +76,7 @@ body{
 
 }
 
+
 button,
 input,
 textarea{
@@ -72,6 +84,7 @@ textarea{
   font-family:inherit;
 
 }
+
 
 button{
 
@@ -106,6 +119,7 @@ header{
 
 }
 
+
 .header-inner{
 
   max-width:1250px;
@@ -126,6 +140,7 @@ header{
 
 }
 
+
 .header-logo{
 
   display:flex;
@@ -135,6 +150,7 @@ header{
   min-width:220px;
 
 }
+
 
 .header-logo img{
 
@@ -147,6 +163,7 @@ header{
   display:block;
 
 }
+
 
 .header-title{
 
@@ -179,6 +196,7 @@ header{
 
 }
 
+
 .header-cart{
 
   min-width:150px;
@@ -188,6 +206,7 @@ header{
   justify-content:flex-end;
 
 }
+
 
 .cart-button{
 
@@ -226,6 +245,7 @@ header{
 
 }
 
+
 .cart-button:hover{
 
   transform:
@@ -240,11 +260,13 @@ header{
 
 }
 
+
 .cart-icon{
 
   font-size:20px;
 
 }
+
 
 #cartCount{
 
@@ -312,6 +334,7 @@ header{
 
 }
 
+
 .hero::before{
 
   content:"";
@@ -336,6 +359,7 @@ header{
   right:-150px;
 
 }
+
 
 .hero::after{
 
@@ -362,6 +386,7 @@ header{
 
 }
 
+
 .hero-inner{
 
   position:relative;
@@ -387,11 +412,13 @@ header{
 
 }
 
+
 .hero-content{
 
   text-align:left;
 
 }
+
 
 .hero-logo-container{
 
@@ -402,6 +429,7 @@ header{
   justify-content:center;
 
 }
+
 
 .hero-logo{
 
@@ -422,6 +450,7 @@ header{
     logoEntrada .8s ease-out;
 
 }
+
 
 @keyframes logoEntrada{
 
@@ -447,6 +476,7 @@ header{
 
 }
 
+
 .hero h1{
 
   font-size:
@@ -459,6 +489,7 @@ header{
   margin-bottom:18px;
 
 }
+
 
 .hero h1 span{
 
@@ -478,6 +509,7 @@ header{
   color:transparent;
 
 }
+
 
 .hero p{
 
@@ -508,6 +540,7 @@ header{
 
 }
 
+
 .section-title{
 
   text-align:center;
@@ -516,6 +549,7 @@ header{
 
 }
 
+
 .section-title h2{
 
   font-size:32px;
@@ -523,6 +557,7 @@ header{
   margin-bottom:8px;
 
 }
+
 
 .section-title p{
 
@@ -549,6 +584,7 @@ header{
 
 }
 
+
 .search{
 
   width:100%;
@@ -571,11 +607,13 @@ header{
 
 }
 
+
 .search::placeholder{
 
   color:#8E829D;
 
 }
+
 
 .search:focus{
 
@@ -607,6 +645,7 @@ header{
 
 }
 
+
 .category{
 
   border:
@@ -630,6 +669,7 @@ header{
 
 }
 
+
 .category:hover{
 
   border-color:
@@ -638,6 +678,7 @@ header{
   color:white;
 
 }
+
 
 .category.active{
 
@@ -675,6 +716,7 @@ header{
 
 }
 
+
 .product-card{
 
   background:
@@ -702,6 +744,7 @@ header{
 
 }
 
+
 .product-card:hover{
 
   transform:
@@ -711,6 +754,7 @@ header{
     rgba(255,159,61,.35);
 
 }
+
 
 .product-image{
 
@@ -735,6 +779,7 @@ header{
 
 }
 
+
 .product-image img{
 
   width:100%;
@@ -745,6 +790,7 @@ header{
 
 }
 
+
 .placeholder{
 
   font-size:55px;
@@ -752,6 +798,7 @@ header{
   opacity:.35;
 
 }
+
 
 .product-info{
 
@@ -764,6 +811,7 @@ header{
   flex:1;
 
 }
+
 
 .product-category{
 
@@ -782,6 +830,7 @@ header{
 
 }
 
+
 .product-name{
 
   font-size:17px;
@@ -793,6 +842,7 @@ header{
   margin-bottom:8px;
 
 }
+
 
 .product-description{
 
@@ -809,6 +859,7 @@ header{
 
 }
 
+
 .product-bottom{
 
   margin-top:auto;
@@ -822,6 +873,7 @@ header{
   gap:10px;
 
 }
+
 
 .price{
 
@@ -844,6 +896,7 @@ header{
 
 }
 
+
 .add-button{
 
   border:0;
@@ -865,6 +918,7 @@ header{
 
 }
 
+
 .out-stock{
 
   color:#FF7B7B;
@@ -874,6 +928,7 @@ header{
   font-weight:800;
 
 }
+
 
 .loading{
 
@@ -912,6 +967,7 @@ header{
 
 }
 
+
 .philosophy-title{
 
   text-align:center;
@@ -937,6 +993,7 @@ header{
 
 }
 
+
 .philosophy-grid{
 
   display:grid;
@@ -948,11 +1005,13 @@ header{
 
 }
 
+
 .philosophy-item{
 
   padding:5px 10px;
 
 }
+
 
 .philosophy-item h3{
 
@@ -964,6 +1023,7 @@ header{
   margin-bottom:10px;
 
 }
+
 
 .philosophy-item p{
 
@@ -1000,6 +1060,7 @@ header{
 
 }
 
+
 .cart-overlay.open{
 
   opacity:1;
@@ -1007,6 +1068,7 @@ header{
   pointer-events:auto;
 
 }
+
 
 .cart{
 
@@ -1041,12 +1103,14 @@ header{
 
 }
 
+
 .cart-overlay.open .cart{
 
   transform:
     translateX(0);
 
 }
+
 
 .cart-header{
 
@@ -1063,11 +1127,13 @@ header{
 
 }
 
+
 .cart-header h2{
 
   font-size:21px;
 
 }
+
 
 .close-cart{
 
@@ -1081,6 +1147,7 @@ header{
 
 }
 
+
 .cart-items{
 
   flex:1;
@@ -1090,6 +1157,7 @@ header{
   padding:15px 20px;
 
 }
+
 
 .cart-item{
 
@@ -1107,11 +1175,13 @@ header{
 
 }
 
+
 .cart-item-name{
 
   font-weight:800;
 
 }
+
 
 .cart-item-price{
 
@@ -1124,6 +1194,7 @@ header{
 
 }
 
+
 .quantity{
 
   display:flex;
@@ -1133,6 +1204,7 @@ header{
   gap:8px;
 
 }
+
 
 .quantity button{
 
@@ -1154,6 +1226,7 @@ header{
 
 }
 
+
 .remove{
 
   border:0;
@@ -1168,6 +1241,7 @@ header{
 
 }
 
+
 .cart-footer{
 
   border-top:
@@ -1176,6 +1250,7 @@ header{
   padding:20px;
 
 }
+
 
 .cart-total{
 
@@ -1191,12 +1266,14 @@ header{
 
 }
 
+
 #cartTotal{
 
   color:
     var(--naranja);
 
 }
+
 
 .checkout-button{
 
@@ -1222,6 +1299,7 @@ header{
   font-weight:900;
 
 }
+
 
 .empty{
 
@@ -1259,11 +1337,13 @@ header{
 
 }
 
+
 .modal.open{
 
   display:flex;
 
 }
+
 
 .modal-box{
 
@@ -1292,6 +1372,7 @@ header{
 
 }
 
+
 .modal-title{
 
   display:flex;
@@ -1304,11 +1385,13 @@ header{
 
 }
 
+
 .modal-title h2{
 
   font-size:23px;
 
 }
+
 
 .close-modal{
 
@@ -1322,11 +1405,13 @@ header{
 
 }
 
+
 .form-group{
 
   margin-bottom:16px;
 
 }
+
 
 .form-group label{
 
@@ -1342,6 +1427,7 @@ header{
     var(--blanco-secundario);
 
 }
+
 
 .form-group input,
 .form-group textarea{
@@ -1366,6 +1452,7 @@ header{
 
 }
 
+
 .form-group textarea{
 
   min-height:80px;
@@ -1373,6 +1460,7 @@ header{
   resize:vertical;
 
 }
+
 
 .summary{
 
@@ -1389,6 +1477,7 @@ header{
   margin:20px 0;
 
 }
+
 
 .summary-total{
 
@@ -1407,6 +1496,7 @@ header{
     var(--naranja);
 
 }
+
 
 .send-order{
 
@@ -1433,6 +1523,7 @@ header{
 
 }
 
+
 .send-order:disabled{
 
   opacity:.6;
@@ -1443,16 +1534,15 @@ header{
 
 
 /* =====================================================
-   INSTAGRAM
+   REDES SOCIALES - BOTONES FLOTANTES
 ===================================================== */
 
+.whatsapp-float,
 .instagram-float{
 
   position:fixed;
 
   right:22px;
-
-  bottom:92px;
 
   width:58px;
 
@@ -1460,45 +1550,45 @@ header{
 
   border-radius:50%;
 
-  background:
-    linear-gradient(
-      135deg,
-      #833AB4,
-      #C13584,
-      #E1306C,
-      #F77737,
-      #FCAF45
-    );
-
-  color:white;
-
   display:flex;
 
   align-items:center;
 
   justify-content:center;
 
+  color:white;
+
   text-decoration:none;
 
-  font-size:29px;
+  z-index:1500;
 
   box-shadow:
     0 8px 25px rgba(0,0,0,.35);
 
-  z-index:1500;
-
-  transition:.25s;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
 
 }
 
-.instagram-float:hover{
 
-  transform:
-    translateY(-3px)
-    scale(1.05);
+/* =====================================================
+   INSTAGRAM
+===================================================== */
 
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.45);
+.instagram-float{
+
+  bottom:92px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833AB4 0%,
+      #C13584 35%,
+      #E1306C 60%,
+      #FD1D1D 78%,
+      #FCAF45 100%
+    );
 
 }
 
@@ -1509,36 +1599,44 @@ header{
 
 .whatsapp-float{
 
-  position:fixed;
-
-  right:22px;
-
   bottom:22px;
-
-  width:58px;
-
-  height:58px;
-
-  border-radius:50%;
 
   background:#25D366;
 
-  color:white;
+}
 
-  display:flex;
 
-  align-items:center;
+/* =====================================================
+   ICONOS SVG
+===================================================== */
 
-  justify-content:center;
+.whatsapp-float svg,
+.instagram-float svg{
 
-  text-decoration:none;
+  width:32px;
 
-  font-size:30px;
+  height:32px;
+
+  display:block;
+
+  fill:white;
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.whatsapp-float:hover,
+.instagram-float:hover{
+
+  transform:
+    translateY(-4px)
+    scale(1.06);
 
   box-shadow:
-    0 8px 25px rgba(0,0,0,.35);
-
-  z-index:1500;
+    0 12px 32px rgba(0,0,0,.45);
 
 }
 
@@ -1564,12 +1662,14 @@ footer{
 
 }
 
+
 footer strong{
 
   color:
     var(--naranja);
 
 }
+
 
 .footer-contact{
 
@@ -1585,6 +1685,7 @@ footer strong{
 
 }
 
+
 .footer-contact a,
 .footer-address a{
 
@@ -1594,6 +1695,7 @@ footer strong{
   text-decoration:none;
 
 }
+
 
 .footer-address{
 
@@ -1618,11 +1720,13 @@ footer strong{
 
   }
 
+
   .header-logo{
 
     min-width:auto;
 
   }
+
 
   .header-logo img{
 
@@ -1630,11 +1734,13 @@ footer strong{
 
   }
 
+
   .header-title{
 
     display:none;
 
   }
+
 
   .header-cart{
 
@@ -1642,11 +1748,13 @@ footer strong{
 
   }
 
+
   .cart-button{
 
     padding:9px 12px;
 
   }
+
 
   .hero-inner{
 
@@ -1656,17 +1764,20 @@ footer strong{
 
   }
 
+
   .hero-content{
 
     text-align:center;
 
   }
 
+
   .hero p{
 
     margin:auto;
 
   }
+
 
   .philosophy-grid{
 
@@ -1685,11 +1796,13 @@ footer strong{
 
   }
 
+
   .header-logo img{
 
     width:125px;
 
   }
+
 
   .cart-button{
 
@@ -1699,11 +1812,13 @@ footer strong{
 
   }
 
+
   .cart-icon{
 
     font-size:18px;
 
   }
+
 
   .hero{
 
@@ -1711,11 +1826,13 @@ footer strong{
 
   }
 
+
   .hero-inner{
 
     padding:45px 18px;
 
   }
+
 
   .hero h1{
 
@@ -1723,11 +1840,13 @@ footer strong{
 
   }
 
+
   .hero p{
 
     font-size:14px;
 
   }
+
 
   .hero-logo{
 
@@ -1737,12 +1856,14 @@ footer strong{
 
   }
 
+
   .container{
 
     padding:
       35px 14px 60px;
 
   }
+
 
   .products-grid{
 
@@ -1753,11 +1874,13 @@ footer strong{
 
   }
 
+
   .product-image{
 
     height:150px;
 
   }
+
 
   .product-info{
 
@@ -1765,11 +1888,13 @@ footer strong{
 
   }
 
+
   .product-name{
 
     font-size:14px;
 
   }
+
 
   .product-description{
 
@@ -1777,11 +1902,13 @@ footer strong{
 
   }
 
+
   .price{
 
     font-size:16px;
 
   }
+
 
   .add-button{
 
@@ -1791,6 +1918,7 @@ footer strong{
 
   }
 
+
   .philosophy{
 
     padding:
@@ -1798,31 +1926,39 @@ footer strong{
 
   }
 
+
+  .whatsapp-float,
   .instagram-float{
 
     right:16px;
 
-    bottom:80px;
-
     width:54px;
 
     height:54px;
-
-    font-size:27px;
 
   }
 
-  .whatsapp-float{
 
-    right:16px;
+  .instagram-float{
+
+    bottom:80px;
+
+  }
+
+
+  .whatsapp-float{
 
     bottom:16px;
 
-    width:54px;
+  }
 
-    height:54px;
 
-    font-size:27px;
+  .whatsapp-float svg,
+  .instagram-float svg{
+
+    width:29px;
+
+    height:29px;
 
   }
 
@@ -1844,6 +1980,7 @@ footer strong{
 
   <div class="header-inner">
 
+
     <div class="header-logo">
 
       <img
@@ -1853,11 +1990,13 @@ footer strong{
 
     </div>
 
+
     <div class="header-title">
 
       IMPERIO PACK JD
 
     </div>
+
 
     <div class="header-cart">
 
@@ -1899,6 +2038,7 @@ footer strong{
 
   <div class="hero-inner">
 
+
     <div class="hero-content">
 
       <h1>
@@ -1911,6 +2051,7 @@ footer strong{
 
       </h1>
 
+
       <p>
 
         Encontrá todo lo que necesitás
@@ -1920,6 +2061,7 @@ footer strong{
       </p>
 
     </div>
+
 
     <div class="hero-logo-container">
 
@@ -1945,6 +2087,7 @@ footer strong{
   id="productos"
 >
 
+
   <div class="section-title">
 
     <h2>
@@ -1957,7 +2100,9 @@ footer strong{
 
   </div>
 
+
   <div class="tools">
+
 
     <input
       id="search"
@@ -1966,6 +2111,7 @@ footer strong{
       placeholder="🔎 Buscar productos..."
       oninput="filtrarProductos()"
     >
+
 
     <div
       id="categories"
@@ -1984,6 +2130,7 @@ footer strong{
     </div>
 
   </div>
+
 
   <div
     id="products"
@@ -2005,13 +2152,16 @@ footer strong{
 
   <section class="philosophy">
 
+
     <div class="philosophy-title">
 
       Nuestra Filosofía
 
     </div>
 
+
     <div class="philosophy-grid">
+
 
       <div class="philosophy-item">
 
@@ -2030,6 +2180,7 @@ footer strong{
 
       </div>
 
+
       <div class="philosophy-item">
 
         <h3>
@@ -2045,6 +2196,7 @@ footer strong{
         </p>
 
       </div>
+
 
       <div class="philosophy-item">
 
@@ -2079,16 +2231,19 @@ footer strong{
   onclick="cerrarCarritoSiCorresponde(event)"
 >
 
+
   <aside
     class="cart"
     onclick="event.stopPropagation()"
   >
+
 
     <div class="cart-header">
 
       <h2>
         🛒 Mi carrito
       </h2>
+
 
       <button
         type="button"
@@ -2102,12 +2257,15 @@ footer strong{
 
     </div>
 
+
     <div
       id="cartItems"
       class="cart-items"
     ></div>
 
+
     <div class="cart-footer">
+
 
       <div class="cart-total">
 
@@ -2120,6 +2278,7 @@ footer strong{
         </span>
 
       </div>
+
 
       <button
         type="button"
@@ -2147,13 +2306,16 @@ footer strong{
   class="modal"
 >
 
+
   <div class="modal-box">
+
 
     <div class="modal-title">
 
       <h2>
         Finalizar pedido
       </h2>
+
 
       <button
         type="button"
@@ -2167,11 +2329,13 @@ footer strong{
 
     </div>
 
+
     <div class="summary">
 
       <div
         id="checkoutSummary"
       ></div>
+
 
       <div
         id="checkoutTotal"
@@ -2183,6 +2347,7 @@ footer strong{
       </div>
 
     </div>
+
 
     <div class="form-group">
 
@@ -2198,6 +2363,7 @@ footer strong{
 
     </div>
 
+
     <div class="form-group">
 
       <label>
@@ -2211,6 +2377,7 @@ footer strong{
       >
 
     </div>
+
 
     <div class="form-group">
 
@@ -2226,6 +2393,7 @@ footer strong{
 
     </div>
 
+
     <div class="form-group">
 
       <label>
@@ -2240,6 +2408,7 @@ footer strong{
 
     </div>
 
+
     <div class="form-group">
 
       <label>
@@ -2252,6 +2421,7 @@ footer strong{
       ></textarea>
 
     </div>
+
 
     <button
       id="sendOrderButton"
@@ -2270,21 +2440,36 @@ footer strong{
 
 
 <!-- =====================================================
-     REDES SOCIALES
+     BOTONES FLOTANTES
 ===================================================== -->
+
+<!-- INSTAGRAM -->
 
 <a
   class="instagram-float"
   href="https://www.instagram.com/imperiopack.r4/"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Instagram Imperio Pack JD"
+  aria-label="Instagram de Imperio Pack JD"
+  title="Instagram"
 >
 
-  📷
+  <svg
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+
+    <path
+      d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+    />
+
+  </svg>
 
 </a>
 
+
+<!-- WHATSAPP -->
 
 <a
   class="whatsapp-float"
@@ -2292,9 +2477,20 @@ footer strong{
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Contactar por WhatsApp"
+  title="WhatsApp"
 >
 
-  💬
+  <svg
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+
+    <path
+      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982 1-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26C2.17 6.521 6.2 2.5 11.14 2.5a9.82 9.82 0 016.987 2.89 9.82 9.82 0 012.89 6.992c-.004 5-4.025 9.031-8.966 9.403"
+    />
+
+  </svg>
 
 </a>
 
@@ -2305,9 +2501,11 @@ footer strong{
 
 <footer>
 
+
   <strong>
     IMPERIO PACK JD
   </strong>
+
 
   <div style="margin-top:8px;">
 
@@ -2315,13 +2513,16 @@ footer strong{
 
   </div>
 
+
   <div class="footer-contact">
+
 
     <a href="tel:+5493585123173">
 
       📞 +54 9 3585 12-3173
 
     </a>
+
 
     <a href="mailto:imperiopack.r4@gmail.com">
 
@@ -2330,6 +2531,7 @@ footer strong{
     </a>
 
   </div>
+
 
   <div class="footer-address">
 
@@ -2369,8 +2571,7 @@ const API_URL =
 /*
  * =====================================================
  * VARIABLES
- * =====================================================
- */
+===================================================== */
 
 let productos = [];
 
@@ -2382,8 +2583,7 @@ let categoriaActual = 'TODOS';
 /*
  * =====================================================
  * INICIO
- * =====================================================
- */
+===================================================== */
 
 document.addEventListener(
   'DOMContentLoaded',
@@ -2400,13 +2600,13 @@ document.addEventListener(
 /*
  * =====================================================
  * CARGAR PRODUCTOS
- * =====================================================
- */
+===================================================== */
 
 async function cargarProductos(){
 
   const contenedor =
     document.getElementById('products');
+
 
   contenedor.innerHTML = `
 
@@ -2418,16 +2618,19 @@ async function cargarProductos(){
 
   `;
 
+
   try{
 
     const url =
       API_URL +
       '?api=productos';
 
+
     console.log(
       'Consultando API:',
       url
     );
+
 
     const respuesta =
       await fetch(
@@ -2438,10 +2641,12 @@ async function cargarProductos(){
         }
       );
 
+
     console.log(
       'Estado API:',
       respuesta.status
     );
+
 
     if(!respuesta.ok){
 
@@ -2452,15 +2657,19 @@ async function cargarProductos(){
 
     }
 
+
     const texto =
       await respuesta.text();
+
 
     console.log(
       'Respuesta API:',
       texto
     );
 
+
     let data;
+
 
     try{
 
@@ -2476,6 +2685,7 @@ async function cargarProductos(){
       );
 
     }
+
 
     if(
       !data ||
@@ -2495,6 +2705,7 @@ async function cargarProductos(){
 
     }
 
+
     if(
       !Array.isArray(
         data.productos
@@ -2506,6 +2717,7 @@ async function cargarProductos(){
       );
 
     }
+
 
     productos =
       data.productos.map(
@@ -2558,14 +2770,17 @@ async function cargarProductos(){
         }
       );
 
+
     console.log(
       'Productos cargados:',
       productos
     );
 
+
     crearCategorias();
 
     mostrarProductos();
+
 
   }
 
@@ -2575,6 +2790,7 @@ async function cargarProductos(){
       'ERROR CARGANDO PRODUCTOS:',
       error
     );
+
 
     contenedor.innerHTML = `
 
@@ -2629,8 +2845,7 @@ async function cargarProductos(){
 /*
  * =====================================================
  * CATEGORIAS
- * =====================================================
- */
+===================================================== */
 
 function crearCategorias(){
 
@@ -2638,6 +2853,7 @@ function crearCategorias(){
     document.getElementById(
       'categories'
     );
+
 
   contenedor.innerHTML = `
 
@@ -2655,6 +2871,7 @@ function crearCategorias(){
     </button>
 
   `;
+
 
   const categorias = [
 
@@ -2676,6 +2893,7 @@ function crearCategorias(){
 
   ].sort();
 
+
   categorias.forEach(
     function(categoria){
 
@@ -2684,14 +2902,18 @@ function crearCategorias(){
           'button'
         );
 
+
       button.type =
         'button';
+
 
       button.className =
         'category';
 
+
       button.textContent =
         categoria;
+
 
       button.onclick =
         function(){
@@ -2702,6 +2924,7 @@ function crearCategorias(){
           );
 
         };
+
 
       contenedor.appendChild(
         button
@@ -2716,8 +2939,7 @@ function crearCategorias(){
 /*
  * =====================================================
  * SELECCIONAR CATEGORIA
- * =====================================================
- */
+===================================================== */
 
 function seleccionarCategoria(
   categoria,
@@ -2726,6 +2948,7 @@ function seleccionarCategoria(
 
   categoriaActual =
     categoria;
+
 
   document
     .querySelectorAll(
@@ -2741,6 +2964,7 @@ function seleccionarCategoria(
       }
     );
 
+
   if(button){
 
     button.classList.add(
@@ -2748,6 +2972,7 @@ function seleccionarCategoria(
     );
 
   }
+
 
   mostrarProductos();
 
@@ -2757,8 +2982,7 @@ function seleccionarCategoria(
 /*
  * =====================================================
  * BUSCADOR
- * =====================================================
- */
+===================================================== */
 
 function filtrarProductos(){
 
@@ -2770,8 +2994,7 @@ function filtrarProductos(){
 /*
  * =====================================================
  * MOSTRAR PRODUCTOS
- * =====================================================
- */
+===================================================== */
 
 function mostrarProductos(){
 
@@ -2780,10 +3003,12 @@ function mostrarProductos(){
       'products'
     );
 
+
   const inputBusqueda =
     document.getElementById(
       'search'
     );
+
 
   const busqueda =
     inputBusqueda
@@ -2791,6 +3016,7 @@ function mostrarProductos(){
           .toLowerCase()
           .trim()
       : '';
+
 
   const filtrados =
     productos.filter(
@@ -2807,6 +3033,7 @@ function mostrarProductos(){
             categoriaActual
           );
 
+
         const texto = (
 
           producto.PRODUCTO +
@@ -2817,6 +3044,7 @@ function mostrarProductos(){
 
         ).toLowerCase();
 
+
         const coincideBusqueda =
 
           !busqueda ||
@@ -2824,6 +3052,7 @@ function mostrarProductos(){
           texto.includes(
             busqueda
           );
+
 
         return (
 
@@ -2834,6 +3063,7 @@ function mostrarProductos(){
 
       }
     );
+
 
   if(!filtrados.length){
 
@@ -2852,7 +3082,9 @@ function mostrarProductos(){
 
   }
 
+
   contenedor.innerHTML = '';
+
 
   filtrados.forEach(
     function(producto){
@@ -2874,8 +3106,7 @@ function mostrarProductos(){
 /*
  * =====================================================
  * CREAR TARJETA
- * =====================================================
- */
+===================================================== */
 
 function crearTarjetaProducto(
   producto
@@ -2886,10 +3117,13 @@ function crearTarjetaProducto(
       'article'
     );
 
+
   card.className =
     'product-card';
 
+
   let imagen = '';
+
 
   if(
     producto.IMAGEN &&
@@ -2939,10 +3173,12 @@ function crearTarjetaProducto(
 
   }
 
+
   const sinStock =
     Number(
       producto.STOCK
     ) <= 0;
+
 
   card.innerHTML = `
 
@@ -2952,7 +3188,9 @@ function crearTarjetaProducto(
 
     </div>
 
+
     <div class="product-info">
+
 
       <div class="product-category">
 
@@ -2962,6 +3200,7 @@ function crearTarjetaProducto(
 
       </div>
 
+
       <div class="product-name">
 
         ${escapeHtml(
@@ -2969,6 +3208,7 @@ function crearTarjetaProducto(
         )}
 
       </div>
+
 
       ${
         producto.DESCRIPCION
@@ -2989,7 +3229,9 @@ function crearTarjetaProducto(
 
       }
 
+
       <div class="product-bottom">
+
 
         <div class="price">
 
@@ -2998,6 +3240,7 @@ function crearTarjetaProducto(
           )}
 
         </div>
+
 
         ${
           sinStock
@@ -3040,6 +3283,7 @@ function crearTarjetaProducto(
 
   `;
 
+
   return card;
 
 }
@@ -3048,8 +3292,7 @@ function crearTarjetaProducto(
 /*
  * =====================================================
  * AGREGAR AL CARRITO
- * =====================================================
- */
+===================================================== */
 
 function agregarAlCarrito(id){
 
@@ -3063,6 +3306,7 @@ function agregarAlCarrito(id){
       }
     );
 
+
   if(!producto){
 
     alert(
@@ -3073,6 +3317,7 @@ function agregarAlCarrito(id){
 
   }
 
+
   const existente =
     carrito.find(
       function(item){
@@ -3082,6 +3327,7 @@ function agregarAlCarrito(id){
 
       }
     );
+
 
   if(existente){
 
@@ -3131,6 +3377,7 @@ function agregarAlCarrito(id){
 
   }
 
+
   actualizarCarrito();
 
 }
@@ -3139,8 +3386,7 @@ function agregarAlCarrito(id){
 /*
  * =====================================================
  * ACTUALIZAR CARRITO
- * =====================================================
- */
+===================================================== */
 
 function actualizarCarrito(){
 
@@ -3148,6 +3394,7 @@ function actualizarCarrito(){
     document.getElementById(
       'cartItems'
     );
+
 
   const contador =
     carrito.reduce(
@@ -3160,10 +3407,12 @@ function actualizarCarrito(){
       0
     );
 
+
   document.getElementById(
     'cartCount'
   ).textContent =
     contador;
+
 
   if(!carrito.length){
 
@@ -3181,19 +3430,24 @@ function actualizarCarrito(){
 
     `;
 
+
     document.getElementById(
       'cartTotal'
     ).textContent =
       '$0';
 
+
     return;
 
   }
 
+
   contenedor.innerHTML =
     '';
 
+
   let total = 0;
+
 
   carrito.forEach(
     function(item,index){
@@ -3202,20 +3456,25 @@ function actualizarCarrito(){
         item.precio *
         item.cantidad;
 
+
       total +=
         subtotal;
+
 
       const div =
         document.createElement(
           'div'
         );
 
+
       div.className =
         'cart-item';
+
 
       div.innerHTML = `
 
         <div>
+
 
           <div class="cart-item-name">
 
@@ -3225,6 +3484,7 @@ function actualizarCarrito(){
 
           </div>
 
+
           <div class="cart-item-price">
 
             $${formatearPrecio(
@@ -3232,6 +3492,7 @@ function actualizarCarrito(){
             )}
 
           </div>
+
 
           <button
             type="button"
@@ -3249,7 +3510,9 @@ function actualizarCarrito(){
 
         </div>
 
+
         <div class="quantity">
+
 
           <button
             type="button"
@@ -3265,11 +3528,13 @@ function actualizarCarrito(){
 
           </button>
 
+
           <strong>
 
             ${item.cantidad}
 
           </strong>
+
 
           <button
             type="button"
@@ -3289,12 +3554,14 @@ function actualizarCarrito(){
 
       `;
 
+
       contenedor.appendChild(
         div
       );
 
     }
   );
+
 
   document.getElementById(
     'cartTotal'
@@ -3310,8 +3577,7 @@ function actualizarCarrito(){
 /*
  * =====================================================
  * CAMBIAR CANTIDAD
- * =====================================================
- */
+===================================================== */
 
 function cambiarCantidad(
   index,
@@ -3321,15 +3587,18 @@ function cambiarCantidad(
   const item =
     carrito[index];
 
+
   if(!item){
 
     return;
 
   }
 
+
   const nuevaCantidad =
     item.cantidad +
     cambio;
+
 
   if(
     nuevaCantidad <= 0
@@ -3362,6 +3631,7 @@ function cambiarCantidad(
 
   }
 
+
   actualizarCarrito();
 
 }
@@ -3370,8 +3640,7 @@ function cambiarCantidad(
 /*
  * =====================================================
  * ELIMINAR
- * =====================================================
- */
+===================================================== */
 
 function eliminarDelCarrito(
   index
@@ -3382,6 +3651,7 @@ function eliminarDelCarrito(
     1
   );
 
+
   actualizarCarrito();
 
 }
@@ -3390,8 +3660,7 @@ function eliminarDelCarrito(
 /*
  * =====================================================
  * ABRIR CARRITO
- * =====================================================
- */
+===================================================== */
 
 function abrirCarrito(){
 
@@ -3409,8 +3678,7 @@ function abrirCarrito(){
 /*
  * =====================================================
  * CERRAR CARRITO
- * =====================================================
- */
+===================================================== */
 
 function cerrarCarrito(){
 
@@ -3423,6 +3691,7 @@ function cerrarCarrito(){
     );
 
 }
+
 
 function cerrarCarritoSiCorresponde(
   event
@@ -3443,8 +3712,7 @@ function cerrarCarritoSiCorresponde(
 /*
  * =====================================================
  * ABRIR CHECKOUT
- * =====================================================
- */
+===================================================== */
 
 function abrirCheckout(){
 
@@ -3458,12 +3726,15 @@ function abrirCheckout(){
 
   }
 
+
   const summary =
     document.getElementById(
       'checkoutSummary'
     );
 
+
   let html = '';
+
 
   carrito.forEach(
     function(item){
@@ -3471,6 +3742,7 @@ function abrirCheckout(){
       const subtotal =
         item.precio *
         item.cantidad;
+
 
       html += `
 
@@ -3493,6 +3765,7 @@ function abrirCheckout(){
 
           </span>
 
+
           <strong>
 
             $${formatearPrecio(
@@ -3508,11 +3781,14 @@ function abrirCheckout(){
     }
   );
 
+
   const total =
     calcularTotal();
 
+
   summary.innerHTML =
     html;
+
 
   document.getElementById(
     'checkoutTotal'
@@ -3521,6 +3797,7 @@ function abrirCheckout(){
     formatearPrecio(
       total
     );
+
 
   document
     .getElementById(
@@ -3536,8 +3813,7 @@ function abrirCheckout(){
 /*
  * =====================================================
  * CERRAR CHECKOUT
- * =====================================================
- */
+===================================================== */
 
 function cerrarCheckout(){
 
@@ -3592,6 +3868,7 @@ async function confirmarPedido(){
 
   }
 
+
   const nombre =
     document
       .getElementById(
@@ -3599,6 +3876,7 @@ async function confirmarPedido(){
       )
       .value
       .trim();
+
 
   const whatsapp =
     document
@@ -3608,6 +3886,7 @@ async function confirmarPedido(){
       .value
       .trim();
 
+
   const email =
     document
       .getElementById(
@@ -3615,6 +3894,7 @@ async function confirmarPedido(){
       )
       .value
       .trim();
+
 
   const direccion =
     document
@@ -3624,6 +3904,7 @@ async function confirmarPedido(){
       .value
       .trim();
 
+
   const observaciones =
     document
       .getElementById(
@@ -3631,6 +3912,7 @@ async function confirmarPedido(){
       )
       .value
       .trim();
+
 
   if(!nombre){
 
@@ -3642,6 +3924,7 @@ async function confirmarPedido(){
 
   }
 
+
   if(!whatsapp){
 
     alert(
@@ -3652,16 +3935,20 @@ async function confirmarPedido(){
 
   }
 
+
   const boton =
     document.getElementById(
       'sendOrderButton'
     );
 
+
   boton.disabled =
     true;
 
+
   boton.textContent =
     'Registrando pedido...';
+
 
   const pedido = {
 
@@ -3684,6 +3971,7 @@ async function confirmarPedido(){
 
     },
 
+
     productos:
 
       carrito.map(
@@ -3703,6 +3991,7 @@ async function confirmarPedido(){
       )
 
   };
+
 
   try{
 
@@ -3728,8 +4017,10 @@ async function confirmarPedido(){
         }
       );
 
+
     const resultado =
       await respuesta.json();
+
 
     if(
       !resultado ||
@@ -3749,6 +4040,7 @@ async function confirmarPedido(){
 
     }
 
+
     if(
       resultado.whatsapp
     ){
@@ -3760,13 +4052,16 @@ async function confirmarPedido(){
 
     }
 
+
     carrito = [];
+
 
     actualizarCarrito();
 
     cerrarCheckout();
 
     cerrarCarrito();
+
 
     alert(
 
@@ -3787,6 +4082,7 @@ async function confirmarPedido(){
       error
     );
 
+
     alert(
 
       'No se pudo registrar el pedido.\n\n' +
@@ -3800,6 +4096,7 @@ async function confirmarPedido(){
 
     boton.disabled =
       false;
+
 
     boton.textContent =
       '💬 ENVIAR PEDIDO POR WHATSAPP';
